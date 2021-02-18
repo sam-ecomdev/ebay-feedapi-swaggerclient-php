@@ -58,13 +58,13 @@ class UpdateUserScheduleRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'preferred_trigger_day_of_month' => 'int',
-        'preferred_trigger_day_of_week' => 'string',
-        'preferred_trigger_hour' => 'string',
-        'schedule_end_date' => 'string',
-        'schedule_name' => 'string',
-        'schedule_start_date' => 'string',
-        'schema_version' => 'string'
+        'preferredTriggerDayOfMonth' => 'int',
+        'preferredTriggerDayOfWeek' => 'string',
+        'preferredTriggerHour' => 'string',
+        'scheduleEndDate' => 'string',
+        'scheduleName' => 'string',
+        'scheduleStartDate' => 'string',
+        'schemaVersion' => 'string'
     ];
 
     /**
@@ -73,13 +73,13 @@ class UpdateUserScheduleRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'preferred_trigger_day_of_month' => null,
-        'preferred_trigger_day_of_week' => null,
-        'preferred_trigger_hour' => null,
-        'schedule_end_date' => null,
-        'schedule_name' => null,
-        'schedule_start_date' => null,
-        'schema_version' => null
+        'preferredTriggerDayOfMonth' => null,
+        'preferredTriggerDayOfWeek' => null,
+        'preferredTriggerHour' => null,
+        'scheduleEndDate' => null,
+        'scheduleName' => null,
+        'scheduleStartDate' => null,
+        'schemaVersion' => null
     ];
 
     /**
@@ -109,13 +109,13 @@ class UpdateUserScheduleRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'preferred_trigger_day_of_month' => 'preferredTriggerDayOfMonth',
-        'preferred_trigger_day_of_week' => 'preferredTriggerDayOfWeek',
-        'preferred_trigger_hour' => 'preferredTriggerHour',
-        'schedule_end_date' => 'scheduleEndDate',
-        'schedule_name' => 'scheduleName',
-        'schedule_start_date' => 'scheduleStartDate',
-        'schema_version' => 'schemaVersion'
+        'preferredTriggerDayOfMonth' => 'preferredTriggerDayOfMonth',
+        'preferredTriggerDayOfWeek' => 'preferredTriggerDayOfWeek',
+        'preferredTriggerHour' => 'preferredTriggerHour',
+        'scheduleEndDate' => 'scheduleEndDate',
+        'scheduleName' => 'scheduleName',
+        'scheduleStartDate' => 'scheduleStartDate',
+        'schemaVersion' => 'schemaVersion'
     ];
 
     /**
@@ -124,13 +124,13 @@ class UpdateUserScheduleRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'preferred_trigger_day_of_month' => 'setPreferredTriggerDayOfMonth',
-        'preferred_trigger_day_of_week' => 'setPreferredTriggerDayOfWeek',
-        'preferred_trigger_hour' => 'setPreferredTriggerHour',
-        'schedule_end_date' => 'setScheduleEndDate',
-        'schedule_name' => 'setScheduleName',
-        'schedule_start_date' => 'setScheduleStartDate',
-        'schema_version' => 'setSchemaVersion'
+        'preferredTriggerDayOfMonth' => 'setPreferredTriggerDayOfMonth',
+        'preferredTriggerDayOfWeek' => 'setPreferredTriggerDayOfWeek',
+        'preferredTriggerHour' => 'setPreferredTriggerHour',
+        'scheduleEndDate' => 'setScheduleEndDate',
+        'scheduleName' => 'setScheduleName',
+        'scheduleStartDate' => 'setScheduleStartDate',
+        'schemaVersion' => 'setSchemaVersion'
     ];
 
     /**
@@ -139,13 +139,13 @@ class UpdateUserScheduleRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'preferred_trigger_day_of_month' => 'getPreferredTriggerDayOfMonth',
-        'preferred_trigger_day_of_week' => 'getPreferredTriggerDayOfWeek',
-        'preferred_trigger_hour' => 'getPreferredTriggerHour',
-        'schedule_end_date' => 'getScheduleEndDate',
-        'schedule_name' => 'getScheduleName',
-        'schedule_start_date' => 'getScheduleStartDate',
-        'schema_version' => 'getSchemaVersion'
+        'preferredTriggerDayOfMonth' => 'getPreferredTriggerDayOfMonth',
+        'preferredTriggerDayOfWeek' => 'getPreferredTriggerDayOfWeek',
+        'preferredTriggerHour' => 'getPreferredTriggerHour',
+        'scheduleEndDate' => 'getScheduleEndDate',
+        'scheduleName' => 'getScheduleName',
+        'scheduleStartDate' => 'getScheduleStartDate',
+        'schemaVersion' => 'getSchemaVersion'
     ];
 
     /**
@@ -208,13 +208,13 @@ class UpdateUserScheduleRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['preferred_trigger_day_of_month'] = isset($data['preferred_trigger_day_of_month']) ? $data['preferred_trigger_day_of_month'] : null;
-        $this->container['preferred_trigger_day_of_week'] = isset($data['preferred_trigger_day_of_week']) ? $data['preferred_trigger_day_of_week'] : null;
-        $this->container['preferred_trigger_hour'] = isset($data['preferred_trigger_hour']) ? $data['preferred_trigger_hour'] : null;
-        $this->container['schedule_end_date'] = isset($data['schedule_end_date']) ? $data['schedule_end_date'] : null;
-        $this->container['schedule_name'] = isset($data['schedule_name']) ? $data['schedule_name'] : null;
-        $this->container['schedule_start_date'] = isset($data['schedule_start_date']) ? $data['schedule_start_date'] : null;
-        $this->container['schema_version'] = isset($data['schema_version']) ? $data['schema_version'] : null;
+        $this->container['preferredTriggerDayOfMonth'] = isset($data['preferredTriggerDayOfMonth']) ? $data['preferredTriggerDayOfMonth'] : null;
+        $this->container['preferredTriggerDayOfWeek'] = isset($data['preferredTriggerDayOfWeek']) ? $data['preferredTriggerDayOfWeek'] : null;
+        $this->container['preferredTriggerHour'] = isset($data['preferredTriggerHour']) ? $data['preferredTriggerHour'] : null;
+        $this->container['scheduleEndDate'] = isset($data['scheduleEndDate']) ? $data['scheduleEndDate'] : null;
+        $this->container['scheduleName'] = isset($data['scheduleName']) ? $data['scheduleName'] : null;
+        $this->container['scheduleStartDate'] = isset($data['scheduleStartDate']) ? $data['scheduleStartDate'] : null;
+        $this->container['schemaVersion'] = isset($data['schemaVersion']) ? $data['schemaVersion'] : null;
     }
 
     /**
@@ -242,169 +242,169 @@ class UpdateUserScheduleRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets preferred_trigger_day_of_month
+     * Gets preferredTriggerDayOfMonth
      *
      * @return int
      */
     public function getPreferredTriggerDayOfMonth()
     {
-        return $this->container['preferred_trigger_day_of_month'];
+        return $this->container['preferredTriggerDayOfMonth'];
     }
 
     /**
-     * Sets preferred_trigger_day_of_month
+     * Sets preferredTriggerDayOfMonth
      *
-     * @param int $preferred_trigger_day_of_month The preferred day of the month to trigger the schedule. This field can be used with preferredTriggerHour for monthly schedules. The last day of the month is used for numbers larger than the actual number of days in the month. This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value. Minimum: 1 Maximum: 31
+     * @param int $preferredTriggerDayOfMonth The preferred day of the month to trigger the schedule. This field can be used with preferredTriggerHour for monthly schedules. The last day of the month is used for numbers larger than the actual number of days in the month. This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value. Minimum: 1 Maximum: 31
      *
      * @return $this
      */
-    public function setPreferredTriggerDayOfMonth($preferred_trigger_day_of_month)
+    public function setPreferredTriggerDayOfMonth($preferredTriggerDayOfMonth)
     {
-        $this->container['preferred_trigger_day_of_month'] = $preferred_trigger_day_of_month;
+        $this->container['preferredTriggerDayOfMonth'] = $preferredTriggerDayOfMonth;
 
         return $this;
     }
 
     /**
-     * Gets preferred_trigger_day_of_week
+     * Gets preferredTriggerDayOfWeek
      *
      * @return string
      */
     public function getPreferredTriggerDayOfWeek()
     {
-        return $this->container['preferred_trigger_day_of_week'];
+        return $this->container['preferredTriggerDayOfWeek'];
     }
 
     /**
-     * Sets preferred_trigger_day_of_week
+     * Sets preferredTriggerDayOfWeek
      *
-     * @param string $preferred_trigger_day_of_week The preferred day of the week to trigger the schedule. This field can be used with preferredTriggerHour for weekly schedules. This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:DayOfWeekEnum'>eBay API documentation</a>
+     * @param string $preferredTriggerDayOfWeek The preferred day of the week to trigger the schedule. This field can be used with preferredTriggerHour for weekly schedules. This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:DayOfWeekEnum'>eBay API documentation</a>
      *
      * @return $this
      */
-    public function setPreferredTriggerDayOfWeek($preferred_trigger_day_of_week)
+    public function setPreferredTriggerDayOfWeek($preferredTriggerDayOfWeek)
     {
-        $this->container['preferred_trigger_day_of_week'] = $preferred_trigger_day_of_week;
+        $this->container['preferredTriggerDayOfWeek'] = $preferredTriggerDayOfWeek;
 
         return $this;
     }
 
     /**
-     * Gets preferred_trigger_hour
+     * Gets preferredTriggerHour
      *
      * @return string
      */
     public function getPreferredTriggerHour()
     {
-        return $this->container['preferred_trigger_hour'];
+        return $this->container['preferredTriggerHour'];
     }
 
     /**
-     * Sets preferred_trigger_hour
+     * Sets preferredTriggerHour
      *
-     * @param string $preferred_trigger_hour The preferred two-digit hour of the day to trigger the schedule. This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value. Format: UTC hhZ For example, the following represents 11:00 am UTC: 11Z Minimum: 00Z Maximum: 23Z
+     * @param string $preferredTriggerHour The preferred two-digit hour of the day to trigger the schedule. This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value. Format: UTC hhZ For example, the following represents 11:00 am UTC: 11Z Minimum: 00Z Maximum: 23Z
      *
      * @return $this
      */
-    public function setPreferredTriggerHour($preferred_trigger_hour)
+    public function setPreferredTriggerHour($preferredTriggerHour)
     {
-        $this->container['preferred_trigger_hour'] = $preferred_trigger_hour;
+        $this->container['preferredTriggerHour'] = $preferredTriggerHour;
 
         return $this;
     }
 
     /**
-     * Gets schedule_end_date
+     * Gets scheduleEndDate
      *
      * @return string
      */
     public function getScheduleEndDate()
     {
-        return $this->container['schedule_end_date'];
+        return $this->container['scheduleEndDate'];
     }
 
     /**
-     * Sets schedule_end_date
+     * Sets scheduleEndDate
      *
-     * @param string $schedule_end_date The timestamp on which the schedule (report generation) ends. After this date, the schedule status becomes INACTIVE. Use this field, if available, to end the schedule in the future. This value must be later than scheduleStartDate (if supplied). This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value. Format: UTC yyyy-MM-ddTHHZ For example, the following represents UTC October 10, 2021 at 10:00 AM: 2021-10-10T10Z
+     * @param string $scheduleEndDate The timestamp on which the schedule (report generation) ends. After this date, the schedule status becomes INACTIVE. Use this field, if available, to end the schedule in the future. This value must be later than scheduleStartDate (if supplied). This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value. Format: UTC yyyy-MM-ddTHHZ For example, the following represents UTC October 10, 2021 at 10:00 AM: 2021-10-10T10Z
      *
      * @return $this
      */
-    public function setScheduleEndDate($schedule_end_date)
+    public function setScheduleEndDate($scheduleEndDate)
     {
-        $this->container['schedule_end_date'] = $schedule_end_date;
+        $this->container['scheduleEndDate'] = $scheduleEndDate;
 
         return $this;
     }
 
     /**
-     * Gets schedule_name
+     * Gets scheduleName
      *
      * @return string
      */
     public function getScheduleName()
     {
-        return $this->container['schedule_name'];
+        return $this->container['scheduleName'];
     }
 
     /**
-     * Sets schedule_name
+     * Sets scheduleName
      *
-     * @param string $schedule_name The schedule name assigned by the user for the created schedule.
+     * @param string $scheduleName The schedule name assigned by the user for the created schedule.
      *
      * @return $this
      */
-    public function setScheduleName($schedule_name)
+    public function setScheduleName($scheduleName)
     {
-        $this->container['schedule_name'] = $schedule_name;
+        $this->container['scheduleName'] = $scheduleName;
 
         return $this;
     }
 
     /**
-     * Gets schedule_start_date
+     * Gets scheduleStartDate
      *
      * @return string
      */
     public function getScheduleStartDate()
     {
-        return $this->container['schedule_start_date'];
+        return $this->container['scheduleStartDate'];
     }
 
     /**
-     * Sets schedule_start_date
+     * Sets scheduleStartDate
      *
-     * @param string $schedule_start_date The timestamp to start generating the report. After this timestamp, the schedule status becomes active until either the scheduleEndDate occurs or the scheduleTemplateId becomes inactive. Use this field, if available, to start the schedule in the future but before the scheduleEndDate (if supplied). This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value. Format: UTC yyyy-MM-ddTHHZ For example, the following represents a schedule start date of UTC October 01, 2020 at 12:00 PM: 2020-01-01T12Z
+     * @param string $scheduleStartDate The timestamp to start generating the report. After this timestamp, the schedule status becomes active until either the scheduleEndDate occurs or the scheduleTemplateId becomes inactive. Use this field, if available, to start the schedule in the future but before the scheduleEndDate (if supplied). This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value. Format: UTC yyyy-MM-ddTHHZ For example, the following represents a schedule start date of UTC October 01, 2020 at 12:00 PM: 2020-01-01T12Z
      *
      * @return $this
      */
-    public function setScheduleStartDate($schedule_start_date)
+    public function setScheduleStartDate($scheduleStartDate)
     {
-        $this->container['schedule_start_date'] = $schedule_start_date;
+        $this->container['scheduleStartDate'] = $scheduleStartDate;
 
         return $this;
     }
 
     /**
-     * Gets schema_version
+     * Gets schemaVersion
      *
      * @return string
      */
     public function getSchemaVersion()
     {
-        return $this->container['schema_version'];
+        return $this->container['schemaVersion'];
     }
 
     /**
-     * Sets schema_version
+     * Sets schemaVersion
      *
-     * @param string $schema_version The schema version of the feedType for the schedule. This field is required if the feedType has a schema version. This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value.
+     * @param string $schemaVersion The schema version of the feedType for the schedule. This field is required if the feedType has a schema version. This field is available as specified by the template (scheduleTemplateId). The template can specify this field as optional or required, and optionally provides a default value.
      *
      * @return $this
      */
-    public function setSchemaVersion($schema_version)
+    public function setSchemaVersion($schemaVersion)
     {
-        $this->container['schema_version'] = $schema_version;
+        $this->container['schemaVersion'] = $schemaVersion;
 
         return $this;
     }

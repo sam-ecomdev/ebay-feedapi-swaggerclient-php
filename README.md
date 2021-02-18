@@ -65,11 +65,11 @@ $apiInstance = new SwaggerEbayFeedApi\Client\Api\CustomerServiceMetricTaskApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accept_language = "accept_language_example"; // string | Use this header to specify the natural language in which the authenticated user desires the response.
+$acceptLanguage = "acceptLanguage_example"; // string | Use this header to specify the natural language in which the authenticated user desires the response.
 $body = new \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest(); // \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest | Request payload containing version, feedType, and optional filterCriteria.
 
 try {
-    $apiInstance->createCustomerServiceMetricTask($accept_language, $body);
+    $apiInstance->createCustomerServiceMetricTask($acceptLanguage, $body);
 } catch (Exception $e) {
     echo 'Exception when calling CustomerServiceMetricTaskApi->createCustomerServiceMetricTask: ', $e->getMessage(), PHP_EOL;
 }

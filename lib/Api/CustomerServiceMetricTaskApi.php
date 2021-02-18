@@ -90,32 +90,32 @@ class CustomerServiceMetricTaskApi
     /**
      * Operation createCustomerServiceMetricTask
      *
-     * @param  string $accept_language Use this header to specify the natural language in which the authenticated user desires the response. (required)
+     * @param  string $acceptLanguage Use this header to specify the natural language in which the authenticated user desires the response. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function createCustomerServiceMetricTask($accept_language, $body)
+    public function createCustomerServiceMetricTask($acceptLanguage, $body)
     {
-        $this->createCustomerServiceMetricTaskWithHttpInfo($accept_language, $body);
+        $this->createCustomerServiceMetricTaskWithHttpInfo($acceptLanguage, $body);
     }
 
     /**
      * Operation createCustomerServiceMetricTaskWithHttpInfo
      *
-     * @param  string $accept_language Use this header to specify the natural language in which the authenticated user desires the response. (required)
+     * @param  string $acceptLanguage Use this header to specify the natural language in which the authenticated user desires the response. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createCustomerServiceMetricTaskWithHttpInfo($accept_language, $body)
+    public function createCustomerServiceMetricTaskWithHttpInfo($acceptLanguage, $body)
     {
         $returnType = '';
-        $request = $this->createCustomerServiceMetricTaskRequest($accept_language, $body);
+        $request = $this->createCustomerServiceMetricTaskRequest($acceptLanguage, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -159,15 +159,15 @@ class CustomerServiceMetricTaskApi
      *
      * 
      *
-     * @param  string $accept_language Use this header to specify the natural language in which the authenticated user desires the response. (required)
+     * @param  string $acceptLanguage Use this header to specify the natural language in which the authenticated user desires the response. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCustomerServiceMetricTaskAsync($accept_language, $body)
+    public function createCustomerServiceMetricTaskAsync($acceptLanguage, $body)
     {
-        return $this->createCustomerServiceMetricTaskAsyncWithHttpInfo($accept_language, $body)
+        return $this->createCustomerServiceMetricTaskAsyncWithHttpInfo($acceptLanguage, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -180,16 +180,16 @@ class CustomerServiceMetricTaskApi
      *
      * 
      *
-     * @param  string $accept_language Use this header to specify the natural language in which the authenticated user desires the response. (required)
+     * @param  string $acceptLanguage Use this header to specify the natural language in which the authenticated user desires the response. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createCustomerServiceMetricTaskAsyncWithHttpInfo($accept_language, $body)
+    public function createCustomerServiceMetricTaskAsyncWithHttpInfo($acceptLanguage, $body)
     {
         $returnType = '';
-        $request = $this->createCustomerServiceMetricTaskRequest($accept_language, $body);
+        $request = $this->createCustomerServiceMetricTaskRequest($acceptLanguage, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -217,18 +217,18 @@ class CustomerServiceMetricTaskApi
     /**
      * Create request for operation 'createCustomerServiceMetricTask'
      *
-     * @param  string $accept_language Use this header to specify the natural language in which the authenticated user desires the response. (required)
+     * @param  string $acceptLanguage Use this header to specify the natural language in which the authenticated user desires the response. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createCustomerServiceMetricTaskRequest($accept_language, $body)
+    protected function createCustomerServiceMetricTaskRequest($acceptLanguage, $body)
     {
-        // verify the required parameter 'accept_language' is set
-        if ($accept_language === null || (is_array($accept_language) && count($accept_language) === 0)) {
+        // verify the required parameter 'acceptLanguage' is set
+        if ($acceptLanguage === null || (is_array($acceptLanguage) && count($acceptLanguage) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $accept_language when calling createCustomerServiceMetricTask'
+                'Missing the required parameter $acceptLanguage when calling createCustomerServiceMetricTask'
             );
         }
         // verify the required parameter 'body' is set
@@ -246,8 +246,8 @@ class CustomerServiceMetricTaskApi
         $multipart = false;
 
         // header params
-        if ($accept_language !== null) {
-            $headerParams['accept-language'] = ObjectSerializer::toHeaderValue($accept_language);
+        if ($acceptLanguage !== null) {
+            $headerParams['accept-language'] = ObjectSerializer::toHeaderValue($acceptLanguage);
         }
 
 
@@ -332,31 +332,31 @@ class CustomerServiceMetricTaskApi
     /**
      * Operation getCustomerServiceMetricTask
      *
-     * @param  string $task_id Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
+     * @param  string $taskId Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask
      */
-    public function getCustomerServiceMetricTask($task_id)
+    public function getCustomerServiceMetricTask($taskId)
     {
-        list($response) = $this->getCustomerServiceMetricTaskWithHttpInfo($task_id);
+        list($response) = $this->getCustomerServiceMetricTaskWithHttpInfo($taskId);
         return $response;
     }
 
     /**
      * Operation getCustomerServiceMetricTaskWithHttpInfo
      *
-     * @param  string $task_id Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
+     * @param  string $taskId Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerServiceMetricTaskWithHttpInfo($task_id)
+    public function getCustomerServiceMetricTaskWithHttpInfo($taskId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask';
-        $request = $this->getCustomerServiceMetricTaskRequest($task_id);
+        $request = $this->getCustomerServiceMetricTaskRequest($taskId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -422,14 +422,14 @@ class CustomerServiceMetricTaskApi
      *
      * 
      *
-     * @param  string $task_id Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
+     * @param  string $taskId Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerServiceMetricTaskAsync($task_id)
+    public function getCustomerServiceMetricTaskAsync($taskId)
     {
-        return $this->getCustomerServiceMetricTaskAsyncWithHttpInfo($task_id)
+        return $this->getCustomerServiceMetricTaskAsyncWithHttpInfo($taskId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -442,15 +442,15 @@ class CustomerServiceMetricTaskApi
      *
      * 
      *
-     * @param  string $task_id Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
+     * @param  string $taskId Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerServiceMetricTaskAsyncWithHttpInfo($task_id)
+    public function getCustomerServiceMetricTaskAsyncWithHttpInfo($taskId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask';
-        $request = $this->getCustomerServiceMetricTaskRequest($task_id);
+        $request = $this->getCustomerServiceMetricTaskRequest($taskId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -492,17 +492,17 @@ class CustomerServiceMetricTaskApi
     /**
      * Create request for operation 'getCustomerServiceMetricTask'
      *
-     * @param  string $task_id Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
+     * @param  string $taskId Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCustomerServiceMetricTaskRequest($task_id)
+    protected function getCustomerServiceMetricTaskRequest($taskId)
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null || (is_array($task_id) && count($task_id) === 0)) {
+        // verify the required parameter 'taskId' is set
+        if ($taskId === null || (is_array($taskId) && count($taskId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $task_id when calling getCustomerServiceMetricTask'
+                'Missing the required parameter $taskId when calling getCustomerServiceMetricTask'
             );
         }
 
@@ -515,10 +515,10 @@ class CustomerServiceMetricTaskApi
 
 
         // path params
-        if ($task_id !== null) {
+        if ($taskId !== null) {
             $resourcePath = str_replace(
                 '{' . 'task_id' . '}',
-                ObjectSerializer::toPathValue($task_id),
+                ObjectSerializer::toPathValue($taskId),
                 $resourcePath
             );
         }
@@ -601,39 +601,39 @@ class CustomerServiceMetricTaskApi
     /**
      * Operation getCustomerServiceMetricTasks
      *
-     * @param  string $date_range The task creation date range. The results are filtered to include only tasks with a creation date that is equal to the dates specified or is within the specified range. Do not use with the look_back_days parameter. Format: UTC For example, tasks within a range: yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on March 8, 2020 2020-03-08T00:00.00.000Z..2020-03-09T00:00:00.000Z Maximum: 90 days (optional)
-     * @param  string $feed_type The feed type associated with the task. The only presently supported value is CUSTOMER_SERVICE_METRICS_REPORT. (optional)
+     * @param  string $dateRange The task creation date range. The results are filtered to include only tasks with a creation date that is equal to the dates specified or is within the specified range. Do not use with the look_back_days parameter. Format: UTC For example, tasks within a range: yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on March 8, 2020 2020-03-08T00:00.00.000Z..2020-03-09T00:00:00.000Z Maximum: 90 days (optional)
+     * @param  string $feedType The feed type associated with the task. The only presently supported value is CUSTOMER_SERVICE_METRICS_REPORT. (optional)
      * @param  int $limit The number of customer service metric tasks to return per page of the result set. Use this parameter in conjunction with the offset parameter to control the pagination of the output. For example, if offset is set to 10 and limit is set to 10, the call retrieves tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Note:This feature employs a zero-based list, where the first item in the list has an offset of 0. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of customer service metric tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. Default: 0 (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricTaskCollection
      */
-    public function getCustomerServiceMetricTasks($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null)
+    public function getCustomerServiceMetricTasks($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null)
     {
-        list($response) = $this->getCustomerServiceMetricTasksWithHttpInfo($date_range, $feed_type, $limit, $look_back_days, $offset);
+        list($response) = $this->getCustomerServiceMetricTasksWithHttpInfo($dateRange, $feedType, $limit, $lookBackDays, $offset);
         return $response;
     }
 
     /**
      * Operation getCustomerServiceMetricTasksWithHttpInfo
      *
-     * @param  string $date_range The task creation date range. The results are filtered to include only tasks with a creation date that is equal to the dates specified or is within the specified range. Do not use with the look_back_days parameter. Format: UTC For example, tasks within a range: yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on March 8, 2020 2020-03-08T00:00.00.000Z..2020-03-09T00:00:00.000Z Maximum: 90 days (optional)
-     * @param  string $feed_type The feed type associated with the task. The only presently supported value is CUSTOMER_SERVICE_METRICS_REPORT. (optional)
+     * @param  string $dateRange The task creation date range. The results are filtered to include only tasks with a creation date that is equal to the dates specified or is within the specified range. Do not use with the look_back_days parameter. Format: UTC For example, tasks within a range: yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on March 8, 2020 2020-03-08T00:00.00.000Z..2020-03-09T00:00:00.000Z Maximum: 90 days (optional)
+     * @param  string $feedType The feed type associated with the task. The only presently supported value is CUSTOMER_SERVICE_METRICS_REPORT. (optional)
      * @param  int $limit The number of customer service metric tasks to return per page of the result set. Use this parameter in conjunction with the offset parameter to control the pagination of the output. For example, if offset is set to 10 and limit is set to 10, the call retrieves tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Note:This feature employs a zero-based list, where the first item in the list has an offset of 0. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of customer service metric tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. Default: 0 (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricTaskCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerServiceMetricTasksWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null)
+    public function getCustomerServiceMetricTasksWithHttpInfo($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricTaskCollection';
-        $request = $this->getCustomerServiceMetricTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset);
+        $request = $this->getCustomerServiceMetricTasksRequest($dateRange, $feedType, $limit, $lookBackDays, $offset);
 
         try {
             $options = $this->createHttpClientOption();
@@ -699,18 +699,18 @@ class CustomerServiceMetricTaskApi
      *
      * 
      *
-     * @param  string $date_range The task creation date range. The results are filtered to include only tasks with a creation date that is equal to the dates specified or is within the specified range. Do not use with the look_back_days parameter. Format: UTC For example, tasks within a range: yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on March 8, 2020 2020-03-08T00:00.00.000Z..2020-03-09T00:00:00.000Z Maximum: 90 days (optional)
-     * @param  string $feed_type The feed type associated with the task. The only presently supported value is CUSTOMER_SERVICE_METRICS_REPORT. (optional)
+     * @param  string $dateRange The task creation date range. The results are filtered to include only tasks with a creation date that is equal to the dates specified or is within the specified range. Do not use with the look_back_days parameter. Format: UTC For example, tasks within a range: yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on March 8, 2020 2020-03-08T00:00.00.000Z..2020-03-09T00:00:00.000Z Maximum: 90 days (optional)
+     * @param  string $feedType The feed type associated with the task. The only presently supported value is CUSTOMER_SERVICE_METRICS_REPORT. (optional)
      * @param  int $limit The number of customer service metric tasks to return per page of the result set. Use this parameter in conjunction with the offset parameter to control the pagination of the output. For example, if offset is set to 10 and limit is set to 10, the call retrieves tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Note:This feature employs a zero-based list, where the first item in the list has an offset of 0. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of customer service metric tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. Default: 0 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerServiceMetricTasksAsync($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null)
+    public function getCustomerServiceMetricTasksAsync($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null)
     {
-        return $this->getCustomerServiceMetricTasksAsyncWithHttpInfo($date_range, $feed_type, $limit, $look_back_days, $offset)
+        return $this->getCustomerServiceMetricTasksAsyncWithHttpInfo($dateRange, $feedType, $limit, $lookBackDays, $offset)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -723,19 +723,19 @@ class CustomerServiceMetricTaskApi
      *
      * 
      *
-     * @param  string $date_range The task creation date range. The results are filtered to include only tasks with a creation date that is equal to the dates specified or is within the specified range. Do not use with the look_back_days parameter. Format: UTC For example, tasks within a range: yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on March 8, 2020 2020-03-08T00:00.00.000Z..2020-03-09T00:00:00.000Z Maximum: 90 days (optional)
-     * @param  string $feed_type The feed type associated with the task. The only presently supported value is CUSTOMER_SERVICE_METRICS_REPORT. (optional)
+     * @param  string $dateRange The task creation date range. The results are filtered to include only tasks with a creation date that is equal to the dates specified or is within the specified range. Do not use with the look_back_days parameter. Format: UTC For example, tasks within a range: yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on March 8, 2020 2020-03-08T00:00.00.000Z..2020-03-09T00:00:00.000Z Maximum: 90 days (optional)
+     * @param  string $feedType The feed type associated with the task. The only presently supported value is CUSTOMER_SERVICE_METRICS_REPORT. (optional)
      * @param  int $limit The number of customer service metric tasks to return per page of the result set. Use this parameter in conjunction with the offset parameter to control the pagination of the output. For example, if offset is set to 10 and limit is set to 10, the call retrieves tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Note:This feature employs a zero-based list, where the first item in the list has an offset of 0. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of customer service metric tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. Default: 0 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCustomerServiceMetricTasksAsyncWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null)
+    public function getCustomerServiceMetricTasksAsyncWithHttpInfo($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricTaskCollection';
-        $request = $this->getCustomerServiceMetricTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset);
+        $request = $this->getCustomerServiceMetricTasksRequest($dateRange, $feedType, $limit, $lookBackDays, $offset);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -777,16 +777,16 @@ class CustomerServiceMetricTaskApi
     /**
      * Create request for operation 'getCustomerServiceMetricTasks'
      *
-     * @param  string $date_range The task creation date range. The results are filtered to include only tasks with a creation date that is equal to the dates specified or is within the specified range. Do not use with the look_back_days parameter. Format: UTC For example, tasks within a range: yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on March 8, 2020 2020-03-08T00:00.00.000Z..2020-03-09T00:00:00.000Z Maximum: 90 days (optional)
-     * @param  string $feed_type The feed type associated with the task. The only presently supported value is CUSTOMER_SERVICE_METRICS_REPORT. (optional)
+     * @param  string $dateRange The task creation date range. The results are filtered to include only tasks with a creation date that is equal to the dates specified or is within the specified range. Do not use with the look_back_days parameter. Format: UTC For example, tasks within a range: yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on March 8, 2020 2020-03-08T00:00.00.000Z..2020-03-09T00:00:00.000Z Maximum: 90 days (optional)
+     * @param  string $feedType The feed type associated with the task. The only presently supported value is CUSTOMER_SERVICE_METRICS_REPORT. (optional)
      * @param  int $limit The number of customer service metric tasks to return per page of the result set. Use this parameter in conjunction with the offset parameter to control the pagination of the output. For example, if offset is set to 10 and limit is set to 10, the call retrieves tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Note:This feature employs a zero-based list, where the first item in the list has an offset of 0. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of customer service metric tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. Default: 0 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCustomerServiceMetricTasksRequest($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null)
+    protected function getCustomerServiceMetricTasksRequest($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null)
     {
 
         $resourcePath = '/customer_service_metric_task';
@@ -797,20 +797,20 @@ class CustomerServiceMetricTaskApi
         $multipart = false;
 
         // query params
-        if ($date_range !== null) {
-            $queryParams['date_range'] = ObjectSerializer::toQueryValue($date_range);
+        if ($dateRange !== null) {
+            $queryParams['date_range'] = ObjectSerializer::toQueryValue($dateRange);
         }
         // query params
-        if ($feed_type !== null) {
-            $queryParams['feed_type'] = ObjectSerializer::toQueryValue($feed_type);
+        if ($feedType !== null) {
+            $queryParams['feed_type'] = ObjectSerializer::toQueryValue($feedType);
         }
         // query params
         if ($limit !== null) {
             $queryParams['limit'] = ObjectSerializer::toQueryValue($limit);
         }
         // query params
-        if ($look_back_days !== null) {
-            $queryParams['look_back_days'] = ObjectSerializer::toQueryValue($look_back_days);
+        if ($lookBackDays !== null) {
+            $queryParams['look_back_days'] = ObjectSerializer::toQueryValue($lookBackDays);
         }
         // query params
         if ($offset !== null) {

@@ -58,9 +58,9 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'creation_date_range' => '\SwaggerEbayFeedApi\Client\Model\DateRange',
-        'modified_date_range' => '\SwaggerEbayFeedApi\Client\Model\DateRange',
-        'order_status' => 'string'
+        'creationDateRange' => '\SwaggerEbayFeedApi\Client\Model\DateRange',
+        'modifiedDateRange' => '\SwaggerEbayFeedApi\Client\Model\DateRange',
+        'orderStatus' => 'string'
     ];
 
     /**
@@ -69,9 +69,9 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'creation_date_range' => null,
-        'modified_date_range' => null,
-        'order_status' => null
+        'creationDateRange' => null,
+        'modifiedDateRange' => null,
+        'orderStatus' => null
     ];
 
     /**
@@ -101,9 +101,9 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'creation_date_range' => 'creationDateRange',
-        'modified_date_range' => 'modifiedDateRange',
-        'order_status' => 'orderStatus'
+        'creationDateRange' => 'creationDateRange',
+        'modifiedDateRange' => 'modifiedDateRange',
+        'orderStatus' => 'orderStatus'
     ];
 
     /**
@@ -112,9 +112,9 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'creation_date_range' => 'setCreationDateRange',
-        'modified_date_range' => 'setModifiedDateRange',
-        'order_status' => 'setOrderStatus'
+        'creationDateRange' => 'setCreationDateRange',
+        'modifiedDateRange' => 'setModifiedDateRange',
+        'orderStatus' => 'setOrderStatus'
     ];
 
     /**
@@ -123,9 +123,9 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'creation_date_range' => 'getCreationDateRange',
-        'modified_date_range' => 'getModifiedDateRange',
-        'order_status' => 'getOrderStatus'
+        'creationDateRange' => 'getCreationDateRange',
+        'modifiedDateRange' => 'getModifiedDateRange',
+        'orderStatus' => 'getOrderStatus'
     ];
 
     /**
@@ -188,9 +188,9 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['creation_date_range'] = isset($data['creation_date_range']) ? $data['creation_date_range'] : null;
-        $this->container['modified_date_range'] = isset($data['modified_date_range']) ? $data['modified_date_range'] : null;
-        $this->container['order_status'] = isset($data['order_status']) ? $data['order_status'] : null;
+        $this->container['creationDateRange'] = isset($data['creationDateRange']) ? $data['creationDateRange'] : null;
+        $this->container['modifiedDateRange'] = isset($data['modifiedDateRange']) ? $data['modifiedDateRange'] : null;
+        $this->container['orderStatus'] = isset($data['orderStatus']) ? $data['orderStatus'] : null;
     }
 
     /**
@@ -218,73 +218,73 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets creation_date_range
+     * Gets creationDateRange
      *
      * @return \SwaggerEbayFeedApi\Client\Model\DateRange
      */
     public function getCreationDateRange()
     {
-        return $this->container['creation_date_range'];
+        return $this->container['creationDateRange'];
     }
 
     /**
-     * Sets creation_date_range
+     * Sets creationDateRange
      *
-     * @param \SwaggerEbayFeedApi\Client\Model\DateRange $creation_date_range creation_date_range
+     * @param \SwaggerEbayFeedApi\Client\Model\DateRange $creationDateRange creationDateRange
      *
      * @return $this
      */
-    public function setCreationDateRange($creation_date_range)
+    public function setCreationDateRange($creationDateRange)
     {
-        $this->container['creation_date_range'] = $creation_date_range;
+        $this->container['creationDateRange'] = $creationDateRange;
 
         return $this;
     }
 
     /**
-     * Gets modified_date_range
+     * Gets modifiedDateRange
      *
      * @return \SwaggerEbayFeedApi\Client\Model\DateRange
      */
     public function getModifiedDateRange()
     {
-        return $this->container['modified_date_range'];
+        return $this->container['modifiedDateRange'];
     }
 
     /**
-     * Sets modified_date_range
+     * Sets modifiedDateRange
      *
-     * @param \SwaggerEbayFeedApi\Client\Model\DateRange $modified_date_range modified_date_range
+     * @param \SwaggerEbayFeedApi\Client\Model\DateRange $modifiedDateRange modifiedDateRange
      *
      * @return $this
      */
-    public function setModifiedDateRange($modified_date_range)
+    public function setModifiedDateRange($modifiedDateRange)
     {
-        $this->container['modified_date_range'] = $modified_date_range;
+        $this->container['modifiedDateRange'] = $modifiedDateRange;
 
         return $this;
     }
 
     /**
-     * Gets order_status
+     * Gets orderStatus
      *
      * @return string
      */
     public function getOrderStatus()
     {
-        return $this->container['order_status'];
+        return $this->container['orderStatus'];
     }
 
     /**
-     * Sets order_status
+     * Sets orderStatus
      *
-     * @param string $order_status The order status of the orders returned. If the filter is omitted from createOrderTask call, orders that are in both ACTIVE and COMPLETED states are returned. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:OrderStatusEnum'>eBay API documentation</a>
+     * @param string $orderStatus The order status of the orders returned. If the filter is omitted from createOrderTask call, orders that are in both ACTIVE and COMPLETED states are returned. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:OrderStatusEnum'>eBay API documentation</a>
      *
      * @return $this
      */
-    public function setOrderStatus($order_status)
+    public function setOrderStatus($orderStatus)
     {
-        $this->container['order_status'] = $order_status;
+        $this->container['orderStatus'] = $orderStatus;
 
         return $this;
     }

@@ -58,8 +58,8 @@ class CreateTaskRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'feed_type' => 'string',
-        'schema_version' => 'string'
+        'feedType' => 'string',
+        'schemaVersion' => 'string'
     ];
 
     /**
@@ -68,8 +68,8 @@ class CreateTaskRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'feed_type' => null,
-        'schema_version' => null
+        'feedType' => null,
+        'schemaVersion' => null
     ];
 
     /**
@@ -99,8 +99,8 @@ class CreateTaskRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'feed_type' => 'feedType',
-        'schema_version' => 'schemaVersion'
+        'feedType' => 'feedType',
+        'schemaVersion' => 'schemaVersion'
     ];
 
     /**
@@ -109,8 +109,8 @@ class CreateTaskRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'feed_type' => 'setFeedType',
-        'schema_version' => 'setSchemaVersion'
+        'feedType' => 'setFeedType',
+        'schemaVersion' => 'setSchemaVersion'
     ];
 
     /**
@@ -119,8 +119,8 @@ class CreateTaskRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'feed_type' => 'getFeedType',
-        'schema_version' => 'getSchemaVersion'
+        'feedType' => 'getFeedType',
+        'schemaVersion' => 'getSchemaVersion'
     ];
 
     /**
@@ -183,8 +183,8 @@ class CreateTaskRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['feed_type'] = isset($data['feed_type']) ? $data['feed_type'] : null;
-        $this->container['schema_version'] = isset($data['schema_version']) ? $data['schema_version'] : null;
+        $this->container['feedType'] = isset($data['feedType']) ? $data['feedType'] : null;
+        $this->container['schemaVersion'] = isset($data['schemaVersion']) ? $data['schemaVersion'] : null;
     }
 
     /**
@@ -212,49 +212,49 @@ class CreateTaskRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets feed_type
+     * Gets feedType
      *
      * @return string
      */
     public function getFeedType()
     {
-        return $this->container['feed_type'];
+        return $this->container['feedType'];
     }
 
     /**
-     * Sets feed_type
+     * Sets feedType
      *
-     * @param string $feed_type The feed type associated with the task. The only presently supported value is LMS_ORDER_ACK.
+     * @param string $feedType The feed type associated with the task. The only presently supported value is LMS_ORDER_ACK.
      *
      * @return $this
      */
-    public function setFeedType($feed_type)
+    public function setFeedType($feedType)
     {
-        $this->container['feed_type'] = $feed_type;
+        $this->container['feedType'] = $feedType;
 
         return $this;
     }
 
     /**
-     * Gets schema_version
+     * Gets schemaVersion
      *
      * @return string
      */
     public function getSchemaVersion()
     {
-        return $this->container['schema_version'];
+        return $this->container['schemaVersion'];
     }
 
     /**
-     * Sets schema_version
+     * Sets schemaVersion
      *
-     * @param string $schema_version The schemaVersion version number of the file format. Acceptable value: 1.0
+     * @param string $schemaVersion The schemaVersion version number of the file format. Acceptable value: 1.0
      *
      * @return $this
      */
-    public function setSchemaVersion($schema_version)
+    public function setSchemaVersion($schemaVersion)
     {
-        $this->container['schema_version'] = $schema_version;
+        $this->container['schemaVersion'] = $schemaVersion;
 
         return $this;
     }

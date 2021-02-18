@@ -58,7 +58,7 @@ class SupportedConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'default_value' => 'string',
+        'defaultValue' => 'string',
         'property' => 'string',
         'usage' => 'string'
     ];
@@ -69,7 +69,7 @@ class SupportedConfiguration implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'default_value' => null,
+        'defaultValue' => null,
         'property' => null,
         'usage' => null
     ];
@@ -101,7 +101,7 @@ class SupportedConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'default_value' => 'defaultValue',
+        'defaultValue' => 'defaultValue',
         'property' => 'property',
         'usage' => 'usage'
     ];
@@ -112,7 +112,7 @@ class SupportedConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'default_value' => 'setDefaultValue',
+        'defaultValue' => 'setDefaultValue',
         'property' => 'setProperty',
         'usage' => 'setUsage'
     ];
@@ -123,7 +123,7 @@ class SupportedConfiguration implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'default_value' => 'getDefaultValue',
+        'defaultValue' => 'getDefaultValue',
         'property' => 'getProperty',
         'usage' => 'getUsage'
     ];
@@ -188,7 +188,7 @@ class SupportedConfiguration implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['default_value'] = isset($data['default_value']) ? $data['default_value'] : null;
+        $this->container['defaultValue'] = isset($data['defaultValue']) ? $data['defaultValue'] : null;
         $this->container['property'] = isset($data['property']) ? $data['property'] : null;
         $this->container['usage'] = isset($data['usage']) ? $data['usage'] : null;
     }
@@ -218,25 +218,25 @@ class SupportedConfiguration implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets default_value
+     * Gets defaultValue
      *
      * @return string
      */
     public function getDefaultValue()
     {
-        return $this->container['default_value'];
+        return $this->container['defaultValue'];
     }
 
     /**
-     * Sets default_value
+     * Sets defaultValue
      *
-     * @param string $default_value The default value for the property. If a value is omitted from the schedule and a default value is supplied, the default value is used.
+     * @param string $defaultValue The default value for the property. If a value is omitted from the schedule and a default value is supplied, the default value is used.
      *
      * @return $this
      */
-    public function setDefaultValue($default_value)
+    public function setDefaultValue($defaultValue)
     {
-        $this->container['default_value'] = $default_value;
+        $this->container['defaultValue'] = $defaultValue;
 
         return $this;
     }

@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteSchedule**
-> deleteSchedule($schedule_id)
+> deleteSchedule($scheduleId)
 
 
 
@@ -88,10 +88,10 @@ $apiInstance = new SwaggerEbayFeedApi\Client\Api\ScheduleApi(
     new GuzzleHttp\Client(),
     $config
 );
-$schedule_id = "schedule_id_example"; // string | The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete.
+$scheduleId = "scheduleId_example"; // string | The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete.
 
 try {
-    $apiInstance->deleteSchedule($schedule_id);
+    $apiInstance->deleteSchedule($scheduleId);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->deleteSchedule: ', $e->getMessage(), PHP_EOL;
 }
@@ -102,7 +102,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **string**| The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. |
+ **scheduleId** | **string**| The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. |
 
 ### Return type
 
@@ -120,7 +120,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLatestResultFile**
-> \SwaggerEbayFeedApi\Client\Model\StreamingOutput getLatestResultFile($schedule_id)
+> \SwaggerEbayFeedApi\Client\Model\StreamingOutput getLatestResultFile($scheduleId)
 
 
 
@@ -140,10 +140,10 @@ $apiInstance = new SwaggerEbayFeedApi\Client\Api\ScheduleApi(
     new GuzzleHttp\Client(),
     $config
 );
-$schedule_id = "schedule_id_example"; // string | The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method.
+$scheduleId = "scheduleId_example"; // string | The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method.
 
 try {
-    $result = $apiInstance->getLatestResultFile($schedule_id);
+    $result = $apiInstance->getLatestResultFile($scheduleId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->getLatestResultFile: ', $e->getMessage(), PHP_EOL;
@@ -155,7 +155,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **string**| The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. |
+ **scheduleId** | **string**| The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. |
 
 ### Return type
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSchedule**
-> \SwaggerEbayFeedApi\Client\Model\UserScheduleResponse getSchedule($schedule_id)
+> \SwaggerEbayFeedApi\Client\Model\UserScheduleResponse getSchedule($scheduleId)
 
 
 
@@ -193,10 +193,10 @@ $apiInstance = new SwaggerEbayFeedApi\Client\Api\ScheduleApi(
     new GuzzleHttp\Client(),
     $config
 );
-$schedule_id = "schedule_id_example"; // string | The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method.
+$scheduleId = "scheduleId_example"; // string | The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method.
 
 try {
-    $result = $apiInstance->getSchedule($schedule_id);
+    $result = $apiInstance->getSchedule($scheduleId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->getSchedule: ', $e->getMessage(), PHP_EOL;
@@ -208,7 +208,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **string**| The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. |
+ **scheduleId** | **string**| The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. |
 
 ### Return type
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getScheduleTemplate**
-> \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse getScheduleTemplate($schedule_template_id)
+> \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse getScheduleTemplate($scheduleTemplateId)
 
 
 
@@ -246,10 +246,10 @@ $apiInstance = new SwaggerEbayFeedApi\Client\Api\ScheduleApi(
     new GuzzleHttp\Client(),
     $config
 );
-$schedule_template_id = "schedule_template_id_example"; // string | The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates.
+$scheduleTemplateId = "scheduleTemplateId_example"; // string | The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates.
 
 try {
-    $result = $apiInstance->getScheduleTemplate($schedule_template_id);
+    $result = $apiInstance->getScheduleTemplate($scheduleTemplateId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->getScheduleTemplate: ', $e->getMessage(), PHP_EOL;
@@ -261,7 +261,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_template_id** | **string**| The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. |
+ **scheduleTemplateId** | **string**| The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. |
 
 ### Return type
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getScheduleTemplates**
-> \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateCollection getScheduleTemplates($feed_type, $limit, $offset)
+> \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateCollection getScheduleTemplates($feedType, $limit, $offset)
 
 
 
@@ -299,12 +299,12 @@ $apiInstance = new SwaggerEbayFeedApi\Client\Api\ScheduleApi(
     new GuzzleHttp\Client(),
     $config
 );
-$feed_type = "feed_type_example"; // string | The feed type of the schedule templates to retrieve.
+$feedType = "feedType_example"; // string | The feed type of the schedule templates to retrieve.
 $limit = 56; // int | The maximum number of schedule templates that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedule templates 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500
 $offset = 56; // int | The number of schedule templates to skip in the result set before returning the first template in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0
 
 try {
-    $result = $apiInstance->getScheduleTemplates($feed_type, $limit, $offset);
+    $result = $apiInstance->getScheduleTemplates($feedType, $limit, $offset);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->getScheduleTemplates: ', $e->getMessage(), PHP_EOL;
@@ -316,7 +316,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **feed_type** | **string**| The feed type of the schedule templates to retrieve. |
+ **feedType** | **string**| The feed type of the schedule templates to retrieve. |
  **limit** | **int**| The maximum number of schedule templates that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedule templates 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 | [optional]
  **offset** | **int**| The number of schedule templates to skip in the result set before returning the first template in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 | [optional]
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSchedules**
-> \SwaggerEbayFeedApi\Client\Model\UserScheduleCollection getSchedules($feed_type, $limit, $offset)
+> \SwaggerEbayFeedApi\Client\Model\UserScheduleCollection getSchedules($feedType, $limit, $offset)
 
 
 
@@ -356,12 +356,12 @@ $apiInstance = new SwaggerEbayFeedApi\Client\Api\ScheduleApi(
     new GuzzleHttp\Client(),
     $config
 );
-$feed_type = "feed_type_example"; // string | The feedType associated with the schedule.
+$feedType = "feedType_example"; // string | The feedType associated with the schedule.
 $limit = 56; // int | The maximum number of schedules that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedules 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500
 $offset = 56; // int | The number of schedules to skip in the result set before returning the first schedule in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0
 
 try {
-    $result = $apiInstance->getSchedules($feed_type, $limit, $offset);
+    $result = $apiInstance->getSchedules($feedType, $limit, $offset);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->getSchedules: ', $e->getMessage(), PHP_EOL;
@@ -373,7 +373,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **feed_type** | **string**| The feedType associated with the schedule. |
+ **feedType** | **string**| The feedType associated with the schedule. |
  **limit** | **int**| The maximum number of schedules that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedules 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 | [optional]
  **offset** | **int**| The number of schedules to skip in the result set before returning the first schedule in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 | [optional]
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateSchedule**
-> updateSchedule($schedule_id, $body)
+> updateSchedule($scheduleId, $body)
 
 
 
@@ -413,11 +413,11 @@ $apiInstance = new SwaggerEbayFeedApi\Client\Api\ScheduleApi(
     new GuzzleHttp\Client(),
     $config
 );
-$schedule_id = "schedule_id_example"; // string | The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method.
+$scheduleId = "scheduleId_example"; // string | The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method.
 $body = new \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest(); // \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest | In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional.
 
 try {
-    $apiInstance->updateSchedule($schedule_id, $body);
+    $apiInstance->updateSchedule($scheduleId, $body);
 } catch (Exception $e) {
     echo 'Exception when calling ScheduleApi->updateSchedule: ', $e->getMessage(), PHP_EOL;
 }
@@ -428,7 +428,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **schedule_id** | **string**| The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. |
+ **scheduleId** | **string**| The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. |
  **body** | [**\SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest**](../Model/UpdateUserScheduleRequest.md)| In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. |
 
 ### Return type

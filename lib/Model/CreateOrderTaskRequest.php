@@ -58,9 +58,9 @@ class CreateOrderTaskRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'feed_type' => 'string',
-        'filter_criteria' => '\SwaggerEbayFeedApi\Client\Model\OrderFilterCriteria',
-        'schema_version' => 'string'
+        'feedType' => 'string',
+        'filterCriteria' => '\SwaggerEbayFeedApi\Client\Model\OrderFilterCriteria',
+        'schemaVersion' => 'string'
     ];
 
     /**
@@ -69,9 +69,9 @@ class CreateOrderTaskRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'feed_type' => null,
-        'filter_criteria' => null,
-        'schema_version' => null
+        'feedType' => null,
+        'filterCriteria' => null,
+        'schemaVersion' => null
     ];
 
     /**
@@ -101,9 +101,9 @@ class CreateOrderTaskRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'feed_type' => 'feedType',
-        'filter_criteria' => 'filterCriteria',
-        'schema_version' => 'schemaVersion'
+        'feedType' => 'feedType',
+        'filterCriteria' => 'filterCriteria',
+        'schemaVersion' => 'schemaVersion'
     ];
 
     /**
@@ -112,9 +112,9 @@ class CreateOrderTaskRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'feed_type' => 'setFeedType',
-        'filter_criteria' => 'setFilterCriteria',
-        'schema_version' => 'setSchemaVersion'
+        'feedType' => 'setFeedType',
+        'filterCriteria' => 'setFilterCriteria',
+        'schemaVersion' => 'setSchemaVersion'
     ];
 
     /**
@@ -123,9 +123,9 @@ class CreateOrderTaskRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'feed_type' => 'getFeedType',
-        'filter_criteria' => 'getFilterCriteria',
-        'schema_version' => 'getSchemaVersion'
+        'feedType' => 'getFeedType',
+        'filterCriteria' => 'getFilterCriteria',
+        'schemaVersion' => 'getSchemaVersion'
     ];
 
     /**
@@ -188,9 +188,9 @@ class CreateOrderTaskRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['feed_type'] = isset($data['feed_type']) ? $data['feed_type'] : null;
-        $this->container['filter_criteria'] = isset($data['filter_criteria']) ? $data['filter_criteria'] : null;
-        $this->container['schema_version'] = isset($data['schema_version']) ? $data['schema_version'] : null;
+        $this->container['feedType'] = isset($data['feedType']) ? $data['feedType'] : null;
+        $this->container['filterCriteria'] = isset($data['filterCriteria']) ? $data['filterCriteria'] : null;
+        $this->container['schemaVersion'] = isset($data['schemaVersion']) ? $data['schemaVersion'] : null;
     }
 
     /**
@@ -218,73 +218,73 @@ class CreateOrderTaskRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets feed_type
+     * Gets feedType
      *
      * @return string
      */
     public function getFeedType()
     {
-        return $this->container['feed_type'];
+        return $this->container['feedType'];
     }
 
     /**
-     * Sets feed_type
+     * Sets feedType
      *
-     * @param string $feed_type The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT.
+     * @param string $feedType The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT.
      *
      * @return $this
      */
-    public function setFeedType($feed_type)
+    public function setFeedType($feedType)
     {
-        $this->container['feed_type'] = $feed_type;
+        $this->container['feedType'] = $feedType;
 
         return $this;
     }
 
     /**
-     * Gets filter_criteria
+     * Gets filterCriteria
      *
      * @return \SwaggerEbayFeedApi\Client\Model\OrderFilterCriteria
      */
     public function getFilterCriteria()
     {
-        return $this->container['filter_criteria'];
+        return $this->container['filterCriteria'];
     }
 
     /**
-     * Sets filter_criteria
+     * Sets filterCriteria
      *
-     * @param \SwaggerEbayFeedApi\Client\Model\OrderFilterCriteria $filter_criteria filter_criteria
+     * @param \SwaggerEbayFeedApi\Client\Model\OrderFilterCriteria $filterCriteria filterCriteria
      *
      * @return $this
      */
-    public function setFilterCriteria($filter_criteria)
+    public function setFilterCriteria($filterCriteria)
     {
-        $this->container['filter_criteria'] = $filter_criteria;
+        $this->container['filterCriteria'] = $filterCriteria;
 
         return $this;
     }
 
     /**
-     * Gets schema_version
+     * Gets schemaVersion
      *
      * @return string
      */
     public function getSchemaVersion()
     {
-        return $this->container['schema_version'];
+        return $this->container['schemaVersion'];
     }
 
     /**
-     * Sets schema_version
+     * Sets schemaVersion
      *
-     * @param string $schema_version The schema version of the LMS OrderReport. For the LMS_ORDER_REPORT feed type, see the OrderReport reference page to see the present schema version. The schemaVersion value is the version number shown at the top of the OrderReport page. Restriction: This value must be 1113 or higher. The OrderReport schema version is updated about every two weeks. All version numbers are odd numbers (even numbers are skipped). For example, the next release version after '1113' is '1115'.
+     * @param string $schemaVersion The schema version of the LMS OrderReport. For the LMS_ORDER_REPORT feed type, see the OrderReport reference page to see the present schema version. The schemaVersion value is the version number shown at the top of the OrderReport page. Restriction: This value must be 1113 or higher. The OrderReport schema version is updated about every two weeks. All version numbers are odd numbers (even numbers are skipped). For example, the next release version after '1113' is '1115'.
      *
      * @return $this
      */
-    public function setSchemaVersion($schema_version)
+    public function setSchemaVersion($schemaVersion)
     {
-        $this->container['schema_version'] = $schema_version;
+        $this->container['schemaVersion'] = $schemaVersion;
 
         return $this;
     }

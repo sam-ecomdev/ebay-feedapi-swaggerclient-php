@@ -91,31 +91,31 @@ class OrderTaskApi
      * Operation createOrderTask
      *
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest $body description not needed (required)
-     * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
+     * @param  string $xEBAYCMARKETPLACEID The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function createOrderTask($body, $x_ebay_c_marketplace_id = null)
+    public function createOrderTask($body, $xEBAYCMARKETPLACEID = null)
     {
-        $this->createOrderTaskWithHttpInfo($body, $x_ebay_c_marketplace_id);
+        $this->createOrderTaskWithHttpInfo($body, $xEBAYCMARKETPLACEID);
     }
 
     /**
      * Operation createOrderTaskWithHttpInfo
      *
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest $body description not needed (required)
-     * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
+     * @param  string $xEBAYCMARKETPLACEID The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOrderTaskWithHttpInfo($body, $x_ebay_c_marketplace_id = null)
+    public function createOrderTaskWithHttpInfo($body, $xEBAYCMARKETPLACEID = null)
     {
         $returnType = '';
-        $request = $this->createOrderTaskRequest($body, $x_ebay_c_marketplace_id);
+        $request = $this->createOrderTaskRequest($body, $xEBAYCMARKETPLACEID);
 
         try {
             $options = $this->createHttpClientOption();
@@ -160,14 +160,14 @@ class OrderTaskApi
      * 
      *
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest $body description not needed (required)
-     * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
+     * @param  string $xEBAYCMARKETPLACEID The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderTaskAsync($body, $x_ebay_c_marketplace_id = null)
+    public function createOrderTaskAsync($body, $xEBAYCMARKETPLACEID = null)
     {
-        return $this->createOrderTaskAsyncWithHttpInfo($body, $x_ebay_c_marketplace_id)
+        return $this->createOrderTaskAsyncWithHttpInfo($body, $xEBAYCMARKETPLACEID)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -181,15 +181,15 @@ class OrderTaskApi
      * 
      *
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest $body description not needed (required)
-     * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
+     * @param  string $xEBAYCMARKETPLACEID The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createOrderTaskAsyncWithHttpInfo($body, $x_ebay_c_marketplace_id = null)
+    public function createOrderTaskAsyncWithHttpInfo($body, $xEBAYCMARKETPLACEID = null)
     {
         $returnType = '';
-        $request = $this->createOrderTaskRequest($body, $x_ebay_c_marketplace_id);
+        $request = $this->createOrderTaskRequest($body, $xEBAYCMARKETPLACEID);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -218,12 +218,12 @@ class OrderTaskApi
      * Create request for operation 'createOrderTask'
      *
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest $body description not needed (required)
-     * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
+     * @param  string $xEBAYCMARKETPLACEID The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createOrderTaskRequest($body, $x_ebay_c_marketplace_id = null)
+    protected function createOrderTaskRequest($body, $xEBAYCMARKETPLACEID = null)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -240,8 +240,8 @@ class OrderTaskApi
         $multipart = false;
 
         // header params
-        if ($x_ebay_c_marketplace_id !== null) {
-            $headerParams['X-EBAY-C-MARKETPLACE-ID'] = ObjectSerializer::toHeaderValue($x_ebay_c_marketplace_id);
+        if ($xEBAYCMARKETPLACEID !== null) {
+            $headerParams['X-EBAY-C-MARKETPLACE-ID'] = ObjectSerializer::toHeaderValue($xEBAYCMARKETPLACEID);
         }
 
 
@@ -326,31 +326,31 @@ class OrderTaskApi
     /**
      * Operation getOrderTask
      *
-     * @param  string $task_id The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
+     * @param  string $taskId The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\OrderTask
      */
-    public function getOrderTask($task_id)
+    public function getOrderTask($taskId)
     {
-        list($response) = $this->getOrderTaskWithHttpInfo($task_id);
+        list($response) = $this->getOrderTaskWithHttpInfo($taskId);
         return $response;
     }
 
     /**
      * Operation getOrderTaskWithHttpInfo
      *
-     * @param  string $task_id The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
+     * @param  string $taskId The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\OrderTask, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrderTaskWithHttpInfo($task_id)
+    public function getOrderTaskWithHttpInfo($taskId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\OrderTask';
-        $request = $this->getOrderTaskRequest($task_id);
+        $request = $this->getOrderTaskRequest($taskId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -416,14 +416,14 @@ class OrderTaskApi
      *
      * 
      *
-     * @param  string $task_id The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
+     * @param  string $taskId The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderTaskAsync($task_id)
+    public function getOrderTaskAsync($taskId)
     {
-        return $this->getOrderTaskAsyncWithHttpInfo($task_id)
+        return $this->getOrderTaskAsyncWithHttpInfo($taskId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -436,15 +436,15 @@ class OrderTaskApi
      *
      * 
      *
-     * @param  string $task_id The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
+     * @param  string $taskId The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderTaskAsyncWithHttpInfo($task_id)
+    public function getOrderTaskAsyncWithHttpInfo($taskId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\OrderTask';
-        $request = $this->getOrderTaskRequest($task_id);
+        $request = $this->getOrderTaskRequest($taskId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -486,17 +486,17 @@ class OrderTaskApi
     /**
      * Create request for operation 'getOrderTask'
      *
-     * @param  string $task_id The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
+     * @param  string $taskId The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOrderTaskRequest($task_id)
+    protected function getOrderTaskRequest($taskId)
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null || (is_array($task_id) && count($task_id) === 0)) {
+        // verify the required parameter 'taskId' is set
+        if ($taskId === null || (is_array($taskId) && count($taskId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $task_id when calling getOrderTask'
+                'Missing the required parameter $taskId when calling getOrderTask'
             );
         }
 
@@ -509,10 +509,10 @@ class OrderTaskApi
 
 
         // path params
-        if ($task_id !== null) {
+        if ($taskId !== null) {
             $resourcePath = str_replace(
                 '{' . 'task_id' . '}',
-                ObjectSerializer::toPathValue($task_id),
+                ObjectSerializer::toPathValue($taskId),
                 $resourcePath
             );
         }
@@ -595,41 +595,41 @@ class OrderTaskApi
     /**
      * Operation getOrderTasks
      *
-     * @param  string $date_range The order tasks creation date range. This range is used to filter the results. The filtered results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only orders less than 90 days old can be retrieved. Do not use with the look_back_days parameter. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z (optional)
-     * @param  string $feed_type The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
+     * @param  string $dateRange The order tasks creation date range. This range is used to filter the results. The filtered results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only orders less than 90 days old can be retrieved. Do not use with the look_back_days parameter. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z (optional)
+     * @param  string $feedType The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
      * @param  int $limit The maximum number of order tasks that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves order tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of order tasks to skip in the result set before returning the first order in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
-     * @param  string $schedule_id The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
+     * @param  string $scheduleId The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\OrderTaskCollection
      */
-    public function getOrderTasks($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
+    public function getOrderTasks($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null, $scheduleId = null)
     {
-        list($response) = $this->getOrderTasksWithHttpInfo($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id);
+        list($response) = $this->getOrderTasksWithHttpInfo($dateRange, $feedType, $limit, $lookBackDays, $offset, $scheduleId);
         return $response;
     }
 
     /**
      * Operation getOrderTasksWithHttpInfo
      *
-     * @param  string $date_range The order tasks creation date range. This range is used to filter the results. The filtered results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only orders less than 90 days old can be retrieved. Do not use with the look_back_days parameter. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z (optional)
-     * @param  string $feed_type The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
+     * @param  string $dateRange The order tasks creation date range. This range is used to filter the results. The filtered results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only orders less than 90 days old can be retrieved. Do not use with the look_back_days parameter. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z (optional)
+     * @param  string $feedType The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
      * @param  int $limit The maximum number of order tasks that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves order tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of order tasks to skip in the result set before returning the first order in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
-     * @param  string $schedule_id The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
+     * @param  string $scheduleId The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\OrderTaskCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrderTasksWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
+    public function getOrderTasksWithHttpInfo($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null, $scheduleId = null)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\OrderTaskCollection';
-        $request = $this->getOrderTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id);
+        $request = $this->getOrderTasksRequest($dateRange, $feedType, $limit, $lookBackDays, $offset, $scheduleId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -695,19 +695,19 @@ class OrderTaskApi
      *
      * 
      *
-     * @param  string $date_range The order tasks creation date range. This range is used to filter the results. The filtered results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only orders less than 90 days old can be retrieved. Do not use with the look_back_days parameter. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z (optional)
-     * @param  string $feed_type The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
+     * @param  string $dateRange The order tasks creation date range. This range is used to filter the results. The filtered results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only orders less than 90 days old can be retrieved. Do not use with the look_back_days parameter. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z (optional)
+     * @param  string $feedType The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
      * @param  int $limit The maximum number of order tasks that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves order tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of order tasks to skip in the result set before returning the first order in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
-     * @param  string $schedule_id The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
+     * @param  string $scheduleId The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderTasksAsync($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
+    public function getOrderTasksAsync($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null, $scheduleId = null)
     {
-        return $this->getOrderTasksAsyncWithHttpInfo($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id)
+        return $this->getOrderTasksAsyncWithHttpInfo($dateRange, $feedType, $limit, $lookBackDays, $offset, $scheduleId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -720,20 +720,20 @@ class OrderTaskApi
      *
      * 
      *
-     * @param  string $date_range The order tasks creation date range. This range is used to filter the results. The filtered results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only orders less than 90 days old can be retrieved. Do not use with the look_back_days parameter. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z (optional)
-     * @param  string $feed_type The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
+     * @param  string $dateRange The order tasks creation date range. This range is used to filter the results. The filtered results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only orders less than 90 days old can be retrieved. Do not use with the look_back_days parameter. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z (optional)
+     * @param  string $feedType The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
      * @param  int $limit The maximum number of order tasks that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves order tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of order tasks to skip in the result set before returning the first order in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
-     * @param  string $schedule_id The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
+     * @param  string $scheduleId The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrderTasksAsyncWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
+    public function getOrderTasksAsyncWithHttpInfo($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null, $scheduleId = null)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\OrderTaskCollection';
-        $request = $this->getOrderTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id);
+        $request = $this->getOrderTasksRequest($dateRange, $feedType, $limit, $lookBackDays, $offset, $scheduleId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -775,17 +775,17 @@ class OrderTaskApi
     /**
      * Create request for operation 'getOrderTasks'
      *
-     * @param  string $date_range The order tasks creation date range. This range is used to filter the results. The filtered results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only orders less than 90 days old can be retrieved. Do not use with the look_back_days parameter. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z (optional)
-     * @param  string $feed_type The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
+     * @param  string $dateRange The order tasks creation date range. This range is used to filter the results. The filtered results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only orders less than 90 days old can be retrieved. Do not use with the look_back_days parameter. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z (optional)
+     * @param  string $feedType The feed type associated with the task. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
      * @param  int $limit The maximum number of order tasks that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves order tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of order tasks to skip in the result set before returning the first order in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
-     * @param  string $schedule_id The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
+     * @param  string $scheduleId The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOrderTasksRequest($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
+    protected function getOrderTasksRequest($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null, $scheduleId = null)
     {
 
         $resourcePath = '/order_task';
@@ -796,28 +796,28 @@ class OrderTaskApi
         $multipart = false;
 
         // query params
-        if ($date_range !== null) {
-            $queryParams['date_range'] = ObjectSerializer::toQueryValue($date_range);
+        if ($dateRange !== null) {
+            $queryParams['date_range'] = ObjectSerializer::toQueryValue($dateRange);
         }
         // query params
-        if ($feed_type !== null) {
-            $queryParams['feed_type'] = ObjectSerializer::toQueryValue($feed_type);
+        if ($feedType !== null) {
+            $queryParams['feed_type'] = ObjectSerializer::toQueryValue($feedType);
         }
         // query params
         if ($limit !== null) {
             $queryParams['limit'] = ObjectSerializer::toQueryValue($limit);
         }
         // query params
-        if ($look_back_days !== null) {
-            $queryParams['look_back_days'] = ObjectSerializer::toQueryValue($look_back_days);
+        if ($lookBackDays !== null) {
+            $queryParams['look_back_days'] = ObjectSerializer::toQueryValue($lookBackDays);
         }
         // query params
         if ($offset !== null) {
             $queryParams['offset'] = ObjectSerializer::toQueryValue($offset);
         }
         // query params
-        if ($schedule_id !== null) {
-            $queryParams['schedule_id'] = ObjectSerializer::toQueryValue($schedule_id);
+        if ($scheduleId !== null) {
+            $queryParams['schedule_id'] = ObjectSerializer::toQueryValue($scheduleId);
         }
 
 

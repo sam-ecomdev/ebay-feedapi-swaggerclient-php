@@ -91,31 +91,31 @@ class TaskApi
      * Operation createTask
      *
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest $body description not needed (required)
-     * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
+     * @param  string $xEBAYCMARKETPLACEID The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function createTask($body, $x_ebay_c_marketplace_id = null)
+    public function createTask($body, $xEBAYCMARKETPLACEID = null)
     {
-        $this->createTaskWithHttpInfo($body, $x_ebay_c_marketplace_id);
+        $this->createTaskWithHttpInfo($body, $xEBAYCMARKETPLACEID);
     }
 
     /**
      * Operation createTaskWithHttpInfo
      *
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest $body description not needed (required)
-     * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
+     * @param  string $xEBAYCMARKETPLACEID The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createTaskWithHttpInfo($body, $x_ebay_c_marketplace_id = null)
+    public function createTaskWithHttpInfo($body, $xEBAYCMARKETPLACEID = null)
     {
         $returnType = '';
-        $request = $this->createTaskRequest($body, $x_ebay_c_marketplace_id);
+        $request = $this->createTaskRequest($body, $xEBAYCMARKETPLACEID);
 
         try {
             $options = $this->createHttpClientOption();
@@ -160,14 +160,14 @@ class TaskApi
      * 
      *
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest $body description not needed (required)
-     * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
+     * @param  string $xEBAYCMARKETPLACEID The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTaskAsync($body, $x_ebay_c_marketplace_id = null)
+    public function createTaskAsync($body, $xEBAYCMARKETPLACEID = null)
     {
-        return $this->createTaskAsyncWithHttpInfo($body, $x_ebay_c_marketplace_id)
+        return $this->createTaskAsyncWithHttpInfo($body, $xEBAYCMARKETPLACEID)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -181,15 +181,15 @@ class TaskApi
      * 
      *
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest $body description not needed (required)
-     * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
+     * @param  string $xEBAYCMARKETPLACEID The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function createTaskAsyncWithHttpInfo($body, $x_ebay_c_marketplace_id = null)
+    public function createTaskAsyncWithHttpInfo($body, $xEBAYCMARKETPLACEID = null)
     {
         $returnType = '';
-        $request = $this->createTaskRequest($body, $x_ebay_c_marketplace_id);
+        $request = $this->createTaskRequest($body, $xEBAYCMARKETPLACEID);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -218,12 +218,12 @@ class TaskApi
      * Create request for operation 'createTask'
      *
      * @param  \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest $body description not needed (required)
-     * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
+     * @param  string $xEBAYCMARKETPLACEID The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function createTaskRequest($body, $x_ebay_c_marketplace_id = null)
+    protected function createTaskRequest($body, $xEBAYCMARKETPLACEID = null)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
@@ -240,8 +240,8 @@ class TaskApi
         $multipart = false;
 
         // header params
-        if ($x_ebay_c_marketplace_id !== null) {
-            $headerParams['X-EBAY-C-MARKETPLACE-ID'] = ObjectSerializer::toHeaderValue($x_ebay_c_marketplace_id);
+        if ($xEBAYCMARKETPLACEID !== null) {
+            $headerParams['X-EBAY-C-MARKETPLACE-ID'] = ObjectSerializer::toHeaderValue($xEBAYCMARKETPLACEID);
         }
 
 
@@ -326,31 +326,31 @@ class TaskApi
     /**
      * Operation getInputFile
      *
-     * @param  string $task_id The task ID associated with the file to be downloaded. (required)
+     * @param  string $taskId The task ID associated with the file to be downloaded. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\StreamingOutput
      */
-    public function getInputFile($task_id)
+    public function getInputFile($taskId)
     {
-        list($response) = $this->getInputFileWithHttpInfo($task_id);
+        list($response) = $this->getInputFileWithHttpInfo($taskId);
         return $response;
     }
 
     /**
      * Operation getInputFileWithHttpInfo
      *
-     * @param  string $task_id The task ID associated with the file to be downloaded. (required)
+     * @param  string $taskId The task ID associated with the file to be downloaded. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\StreamingOutput, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getInputFileWithHttpInfo($task_id)
+    public function getInputFileWithHttpInfo($taskId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
-        $request = $this->getInputFileRequest($task_id);
+        $request = $this->getInputFileRequest($taskId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -416,14 +416,14 @@ class TaskApi
      *
      * 
      *
-     * @param  string $task_id The task ID associated with the file to be downloaded. (required)
+     * @param  string $taskId The task ID associated with the file to be downloaded. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getInputFileAsync($task_id)
+    public function getInputFileAsync($taskId)
     {
-        return $this->getInputFileAsyncWithHttpInfo($task_id)
+        return $this->getInputFileAsyncWithHttpInfo($taskId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -436,15 +436,15 @@ class TaskApi
      *
      * 
      *
-     * @param  string $task_id The task ID associated with the file to be downloaded. (required)
+     * @param  string $taskId The task ID associated with the file to be downloaded. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getInputFileAsyncWithHttpInfo($task_id)
+    public function getInputFileAsyncWithHttpInfo($taskId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
-        $request = $this->getInputFileRequest($task_id);
+        $request = $this->getInputFileRequest($taskId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -486,17 +486,17 @@ class TaskApi
     /**
      * Create request for operation 'getInputFile'
      *
-     * @param  string $task_id The task ID associated with the file to be downloaded. (required)
+     * @param  string $taskId The task ID associated with the file to be downloaded. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getInputFileRequest($task_id)
+    protected function getInputFileRequest($taskId)
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null || (is_array($task_id) && count($task_id) === 0)) {
+        // verify the required parameter 'taskId' is set
+        if ($taskId === null || (is_array($taskId) && count($taskId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $task_id when calling getInputFile'
+                'Missing the required parameter $taskId when calling getInputFile'
             );
         }
 
@@ -509,10 +509,10 @@ class TaskApi
 
 
         // path params
-        if ($task_id !== null) {
+        if ($taskId !== null) {
             $resourcePath = str_replace(
                 '{' . 'task_id' . '}',
-                ObjectSerializer::toPathValue($task_id),
+                ObjectSerializer::toPathValue($taskId),
                 $resourcePath
             );
         }
@@ -595,31 +595,31 @@ class TaskApi
     /**
      * Operation getResultFile
      *
-     * @param  string $task_id The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
+     * @param  string $taskId The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\StreamingOutput
      */
-    public function getResultFile($task_id)
+    public function getResultFile($taskId)
     {
-        list($response) = $this->getResultFileWithHttpInfo($task_id);
+        list($response) = $this->getResultFileWithHttpInfo($taskId);
         return $response;
     }
 
     /**
      * Operation getResultFileWithHttpInfo
      *
-     * @param  string $task_id The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
+     * @param  string $taskId The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\StreamingOutput, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getResultFileWithHttpInfo($task_id)
+    public function getResultFileWithHttpInfo($taskId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
-        $request = $this->getResultFileRequest($task_id);
+        $request = $this->getResultFileRequest($taskId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -685,14 +685,14 @@ class TaskApi
      *
      * 
      *
-     * @param  string $task_id The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
+     * @param  string $taskId The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getResultFileAsync($task_id)
+    public function getResultFileAsync($taskId)
     {
-        return $this->getResultFileAsyncWithHttpInfo($task_id)
+        return $this->getResultFileAsyncWithHttpInfo($taskId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -705,15 +705,15 @@ class TaskApi
      *
      * 
      *
-     * @param  string $task_id The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
+     * @param  string $taskId The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getResultFileAsyncWithHttpInfo($task_id)
+    public function getResultFileAsyncWithHttpInfo($taskId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
-        $request = $this->getResultFileRequest($task_id);
+        $request = $this->getResultFileRequest($taskId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -755,17 +755,17 @@ class TaskApi
     /**
      * Create request for operation 'getResultFile'
      *
-     * @param  string $task_id The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
+     * @param  string $taskId The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getResultFileRequest($task_id)
+    protected function getResultFileRequest($taskId)
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null || (is_array($task_id) && count($task_id) === 0)) {
+        // verify the required parameter 'taskId' is set
+        if ($taskId === null || (is_array($taskId) && count($taskId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $task_id when calling getResultFile'
+                'Missing the required parameter $taskId when calling getResultFile'
             );
         }
 
@@ -778,10 +778,10 @@ class TaskApi
 
 
         // path params
-        if ($task_id !== null) {
+        if ($taskId !== null) {
             $resourcePath = str_replace(
                 '{' . 'task_id' . '}',
-                ObjectSerializer::toPathValue($task_id),
+                ObjectSerializer::toPathValue($taskId),
                 $resourcePath
             );
         }
@@ -864,31 +864,31 @@ class TaskApi
     /**
      * Operation getTask
      *
-     * @param  string $task_id The ID of the task. This ID was generated when the task was created. (required)
+     * @param  string $taskId The ID of the task. This ID was generated when the task was created. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\Task
      */
-    public function getTask($task_id)
+    public function getTask($taskId)
     {
-        list($response) = $this->getTaskWithHttpInfo($task_id);
+        list($response) = $this->getTaskWithHttpInfo($taskId);
         return $response;
     }
 
     /**
      * Operation getTaskWithHttpInfo
      *
-     * @param  string $task_id The ID of the task. This ID was generated when the task was created. (required)
+     * @param  string $taskId The ID of the task. This ID was generated when the task was created. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\Task, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTaskWithHttpInfo($task_id)
+    public function getTaskWithHttpInfo($taskId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\Task';
-        $request = $this->getTaskRequest($task_id);
+        $request = $this->getTaskRequest($taskId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -954,14 +954,14 @@ class TaskApi
      *
      * 
      *
-     * @param  string $task_id The ID of the task. This ID was generated when the task was created. (required)
+     * @param  string $taskId The ID of the task. This ID was generated when the task was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTaskAsync($task_id)
+    public function getTaskAsync($taskId)
     {
-        return $this->getTaskAsyncWithHttpInfo($task_id)
+        return $this->getTaskAsyncWithHttpInfo($taskId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -974,15 +974,15 @@ class TaskApi
      *
      * 
      *
-     * @param  string $task_id The ID of the task. This ID was generated when the task was created. (required)
+     * @param  string $taskId The ID of the task. This ID was generated when the task was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTaskAsyncWithHttpInfo($task_id)
+    public function getTaskAsyncWithHttpInfo($taskId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\Task';
-        $request = $this->getTaskRequest($task_id);
+        $request = $this->getTaskRequest($taskId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1024,17 +1024,17 @@ class TaskApi
     /**
      * Create request for operation 'getTask'
      *
-     * @param  string $task_id The ID of the task. This ID was generated when the task was created. (required)
+     * @param  string $taskId The ID of the task. This ID was generated when the task was created. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTaskRequest($task_id)
+    protected function getTaskRequest($taskId)
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null || (is_array($task_id) && count($task_id) === 0)) {
+        // verify the required parameter 'taskId' is set
+        if ($taskId === null || (is_array($taskId) && count($taskId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $task_id when calling getTask'
+                'Missing the required parameter $taskId when calling getTask'
             );
         }
 
@@ -1047,10 +1047,10 @@ class TaskApi
 
 
         // path params
-        if ($task_id !== null) {
+        if ($taskId !== null) {
             $resourcePath = str_replace(
                 '{' . 'task_id' . '}',
-                ObjectSerializer::toPathValue($task_id),
+                ObjectSerializer::toPathValue($taskId),
                 $resourcePath
             );
         }
@@ -1133,41 +1133,41 @@ class TaskApi
     /**
      * Operation getTasks
      *
-     * @param  string $date_range The tasks creation date range. This range is used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only tasks that are less than 90 days can be retrieved. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z Maximum: 90 days (optional)
-     * @param  string $feed_type The feed type associated with the tasks to be returned. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
+     * @param  string $dateRange The tasks creation date range. This range is used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only tasks that are less than 90 days can be retrieved. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z Maximum: 90 days (optional)
+     * @param  string $feedType The feed type associated with the tasks to be returned. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
      * @param  int $limit The maximum number of tasks that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
-     * @param  string $schedule_id The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
+     * @param  string $scheduleId The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\TaskCollection
      */
-    public function getTasks($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
+    public function getTasks($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null, $scheduleId = null)
     {
-        list($response) = $this->getTasksWithHttpInfo($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id);
+        list($response) = $this->getTasksWithHttpInfo($dateRange, $feedType, $limit, $lookBackDays, $offset, $scheduleId);
         return $response;
     }
 
     /**
      * Operation getTasksWithHttpInfo
      *
-     * @param  string $date_range The tasks creation date range. This range is used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only tasks that are less than 90 days can be retrieved. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z Maximum: 90 days (optional)
-     * @param  string $feed_type The feed type associated with the tasks to be returned. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
+     * @param  string $dateRange The tasks creation date range. This range is used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only tasks that are less than 90 days can be retrieved. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z Maximum: 90 days (optional)
+     * @param  string $feedType The feed type associated with the tasks to be returned. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
      * @param  int $limit The maximum number of tasks that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
-     * @param  string $schedule_id The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
+     * @param  string $scheduleId The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\TaskCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTasksWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
+    public function getTasksWithHttpInfo($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null, $scheduleId = null)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\TaskCollection';
-        $request = $this->getTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id);
+        $request = $this->getTasksRequest($dateRange, $feedType, $limit, $lookBackDays, $offset, $scheduleId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1233,19 +1233,19 @@ class TaskApi
      *
      * 
      *
-     * @param  string $date_range The tasks creation date range. This range is used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only tasks that are less than 90 days can be retrieved. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z Maximum: 90 days (optional)
-     * @param  string $feed_type The feed type associated with the tasks to be returned. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
+     * @param  string $dateRange The tasks creation date range. This range is used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only tasks that are less than 90 days can be retrieved. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z Maximum: 90 days (optional)
+     * @param  string $feedType The feed type associated with the tasks to be returned. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
      * @param  int $limit The maximum number of tasks that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
-     * @param  string $schedule_id The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
+     * @param  string $scheduleId The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTasksAsync($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
+    public function getTasksAsync($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null, $scheduleId = null)
     {
-        return $this->getTasksAsyncWithHttpInfo($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id)
+        return $this->getTasksAsyncWithHttpInfo($dateRange, $feedType, $limit, $lookBackDays, $offset, $scheduleId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1258,20 +1258,20 @@ class TaskApi
      *
      * 
      *
-     * @param  string $date_range The tasks creation date range. This range is used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only tasks that are less than 90 days can be retrieved. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z Maximum: 90 days (optional)
-     * @param  string $feed_type The feed type associated with the tasks to be returned. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
+     * @param  string $dateRange The tasks creation date range. This range is used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only tasks that are less than 90 days can be retrieved. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z Maximum: 90 days (optional)
+     * @param  string $feedType The feed type associated with the tasks to be returned. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
      * @param  int $limit The maximum number of tasks that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
-     * @param  string $schedule_id The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
+     * @param  string $scheduleId The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTasksAsyncWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
+    public function getTasksAsyncWithHttpInfo($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null, $scheduleId = null)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\TaskCollection';
-        $request = $this->getTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id);
+        $request = $this->getTasksRequest($dateRange, $feedType, $limit, $lookBackDays, $offset, $scheduleId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1313,17 +1313,17 @@ class TaskApi
     /**
      * Create request for operation 'getTasks'
      *
-     * @param  string $date_range The tasks creation date range. This range is used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only tasks that are less than 90 days can be retrieved. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z Maximum: 90 days (optional)
-     * @param  string $feed_type The feed type associated with the tasks to be returned. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
+     * @param  string $dateRange The tasks creation date range. This range is used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. Only tasks that are less than 90 days can be retrieved. Format: UTC For example: Tasks within a range yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ Tasks created on September 8, 2019 2019-09-08T00:00:00.000Z..2019-09-09T00:00:00.000Z Maximum: 90 days (optional)
+     * @param  string $feedType The feed type associated with the tasks to be returned. The only presently supported value is LMS_ORDER_REPORT. Do not use with the scheduled_id parameter. Since schedules are based on feed types, you can specify a schedule (scheduled_id) that returns the needed feed_type. (optional)
      * @param  int $limit The maximum number of tasks that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves tasks 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
-     * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
+     * @param  int $lookBackDays The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
-     * @param  string $schedule_id The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
+     * @param  string $scheduleId The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTasksRequest($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
+    protected function getTasksRequest($dateRange = null, $feedType = null, $limit = null, $lookBackDays = null, $offset = null, $scheduleId = null)
     {
 
         $resourcePath = '/task';
@@ -1334,28 +1334,28 @@ class TaskApi
         $multipart = false;
 
         // query params
-        if ($date_range !== null) {
-            $queryParams['date_range'] = ObjectSerializer::toQueryValue($date_range);
+        if ($dateRange !== null) {
+            $queryParams['date_range'] = ObjectSerializer::toQueryValue($dateRange);
         }
         // query params
-        if ($feed_type !== null) {
-            $queryParams['feed_type'] = ObjectSerializer::toQueryValue($feed_type);
+        if ($feedType !== null) {
+            $queryParams['feed_type'] = ObjectSerializer::toQueryValue($feedType);
         }
         // query params
         if ($limit !== null) {
             $queryParams['limit'] = ObjectSerializer::toQueryValue($limit);
         }
         // query params
-        if ($look_back_days !== null) {
-            $queryParams['look_back_days'] = ObjectSerializer::toQueryValue($look_back_days);
+        if ($lookBackDays !== null) {
+            $queryParams['look_back_days'] = ObjectSerializer::toQueryValue($lookBackDays);
         }
         // query params
         if ($offset !== null) {
             $queryParams['offset'] = ObjectSerializer::toQueryValue($offset);
         }
         // query params
-        if ($schedule_id !== null) {
-            $queryParams['schedule_id'] = ObjectSerializer::toQueryValue($schedule_id);
+        if ($scheduleId !== null) {
+            $queryParams['schedule_id'] = ObjectSerializer::toQueryValue($scheduleId);
         }
 
 
@@ -1437,33 +1437,33 @@ class TaskApi
     /**
      * Operation uploadFile
      *
-     * @param  string $task_id The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
+     * @param  string $taskId The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition $body body (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
-    public function uploadFile($task_id, $body = null)
+    public function uploadFile($taskId, $body = null)
     {
-        list($response) = $this->uploadFileWithHttpInfo($task_id, $body);
+        list($response) = $this->uploadFileWithHttpInfo($taskId, $body);
         return $response;
     }
 
     /**
      * Operation uploadFileWithHttpInfo
      *
-     * @param  string $task_id The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
+     * @param  string $taskId The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition $body (optional)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
-    public function uploadFileWithHttpInfo($task_id, $body = null)
+    public function uploadFileWithHttpInfo($taskId, $body = null)
     {
         $returnType = 'object';
-        $request = $this->uploadFileRequest($task_id, $body);
+        $request = $this->uploadFileRequest($taskId, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1529,15 +1529,15 @@ class TaskApi
      *
      * 
      *
-     * @param  string $task_id The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
+     * @param  string $taskId The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uploadFileAsync($task_id, $body = null)
+    public function uploadFileAsync($taskId, $body = null)
     {
-        return $this->uploadFileAsyncWithHttpInfo($task_id, $body)
+        return $this->uploadFileAsyncWithHttpInfo($taskId, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1550,16 +1550,16 @@ class TaskApi
      *
      * 
      *
-     * @param  string $task_id The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
+     * @param  string $taskId The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uploadFileAsyncWithHttpInfo($task_id, $body = null)
+    public function uploadFileAsyncWithHttpInfo($taskId, $body = null)
     {
         $returnType = 'object';
-        $request = $this->uploadFileRequest($task_id, $body);
+        $request = $this->uploadFileRequest($taskId, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1601,18 +1601,18 @@ class TaskApi
     /**
      * Create request for operation 'uploadFile'
      *
-     * @param  string $task_id The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
+     * @param  string $taskId The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function uploadFileRequest($task_id, $body = null)
+    protected function uploadFileRequest($taskId, $body = null)
     {
-        // verify the required parameter 'task_id' is set
-        if ($task_id === null || (is_array($task_id) && count($task_id) === 0)) {
+        // verify the required parameter 'taskId' is set
+        if ($taskId === null || (is_array($taskId) && count($taskId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $task_id when calling uploadFile'
+                'Missing the required parameter $taskId when calling uploadFile'
             );
         }
 
@@ -1625,10 +1625,10 @@ class TaskApi
 
 
         // path params
-        if ($task_id !== null) {
+        if ($taskId !== null) {
             $resourcePath = str_replace(
                 '{' . 'task_id' . '}',
-                ObjectSerializer::toPathValue($task_id),
+                ObjectSerializer::toPathValue($taskId),
                 $resourcePath
             );
         }

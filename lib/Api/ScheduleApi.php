@@ -354,30 +354,30 @@ class ScheduleApi
     /**
      * Operation deleteSchedule
      *
-     * @param  string $schedule_id The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
+     * @param  string $scheduleId The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function deleteSchedule($schedule_id)
+    public function deleteSchedule($scheduleId)
     {
-        $this->deleteScheduleWithHttpInfo($schedule_id);
+        $this->deleteScheduleWithHttpInfo($scheduleId);
     }
 
     /**
      * Operation deleteScheduleWithHttpInfo
      *
-     * @param  string $schedule_id The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
+     * @param  string $scheduleId The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteScheduleWithHttpInfo($schedule_id)
+    public function deleteScheduleWithHttpInfo($scheduleId)
     {
         $returnType = '';
-        $request = $this->deleteScheduleRequest($schedule_id);
+        $request = $this->deleteScheduleRequest($scheduleId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -421,14 +421,14 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $schedule_id The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
+     * @param  string $scheduleId The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteScheduleAsync($schedule_id)
+    public function deleteScheduleAsync($scheduleId)
     {
-        return $this->deleteScheduleAsyncWithHttpInfo($schedule_id)
+        return $this->deleteScheduleAsyncWithHttpInfo($scheduleId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -441,15 +441,15 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $schedule_id The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
+     * @param  string $scheduleId The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteScheduleAsyncWithHttpInfo($schedule_id)
+    public function deleteScheduleAsyncWithHttpInfo($scheduleId)
     {
         $returnType = '';
-        $request = $this->deleteScheduleRequest($schedule_id);
+        $request = $this->deleteScheduleRequest($scheduleId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -477,17 +477,17 @@ class ScheduleApi
     /**
      * Create request for operation 'deleteSchedule'
      *
-     * @param  string $schedule_id The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
+     * @param  string $scheduleId The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function deleteScheduleRequest($schedule_id)
+    protected function deleteScheduleRequest($scheduleId)
     {
-        // verify the required parameter 'schedule_id' is set
-        if ($schedule_id === null || (is_array($schedule_id) && count($schedule_id) === 0)) {
+        // verify the required parameter 'scheduleId' is set
+        if ($scheduleId === null || (is_array($scheduleId) && count($scheduleId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $schedule_id when calling deleteSchedule'
+                'Missing the required parameter $scheduleId when calling deleteSchedule'
             );
         }
 
@@ -500,10 +500,10 @@ class ScheduleApi
 
 
         // path params
-        if ($schedule_id !== null) {
+        if ($scheduleId !== null) {
             $resourcePath = str_replace(
                 '{' . 'schedule_id' . '}',
-                ObjectSerializer::toPathValue($schedule_id),
+                ObjectSerializer::toPathValue($scheduleId),
                 $resourcePath
             );
         }
@@ -586,31 +586,31 @@ class ScheduleApi
     /**
      * Operation getLatestResultFile
      *
-     * @param  string $schedule_id The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\StreamingOutput
      */
-    public function getLatestResultFile($schedule_id)
+    public function getLatestResultFile($scheduleId)
     {
-        list($response) = $this->getLatestResultFileWithHttpInfo($schedule_id);
+        list($response) = $this->getLatestResultFileWithHttpInfo($scheduleId);
         return $response;
     }
 
     /**
      * Operation getLatestResultFileWithHttpInfo
      *
-     * @param  string $schedule_id The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\StreamingOutput, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getLatestResultFileWithHttpInfo($schedule_id)
+    public function getLatestResultFileWithHttpInfo($scheduleId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
-        $request = $this->getLatestResultFileRequest($schedule_id);
+        $request = $this->getLatestResultFileRequest($scheduleId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -676,14 +676,14 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $schedule_id The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLatestResultFileAsync($schedule_id)
+    public function getLatestResultFileAsync($scheduleId)
     {
-        return $this->getLatestResultFileAsyncWithHttpInfo($schedule_id)
+        return $this->getLatestResultFileAsyncWithHttpInfo($scheduleId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -696,15 +696,15 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $schedule_id The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLatestResultFileAsyncWithHttpInfo($schedule_id)
+    public function getLatestResultFileAsyncWithHttpInfo($scheduleId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
-        $request = $this->getLatestResultFileRequest($schedule_id);
+        $request = $this->getLatestResultFileRequest($scheduleId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -746,17 +746,17 @@ class ScheduleApi
     /**
      * Create request for operation 'getLatestResultFile'
      *
-     * @param  string $schedule_id The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getLatestResultFileRequest($schedule_id)
+    protected function getLatestResultFileRequest($scheduleId)
     {
-        // verify the required parameter 'schedule_id' is set
-        if ($schedule_id === null || (is_array($schedule_id) && count($schedule_id) === 0)) {
+        // verify the required parameter 'scheduleId' is set
+        if ($scheduleId === null || (is_array($scheduleId) && count($scheduleId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $schedule_id when calling getLatestResultFile'
+                'Missing the required parameter $scheduleId when calling getLatestResultFile'
             );
         }
 
@@ -769,10 +769,10 @@ class ScheduleApi
 
 
         // path params
-        if ($schedule_id !== null) {
+        if ($scheduleId !== null) {
             $resourcePath = str_replace(
                 '{' . 'schedule_id' . '}',
-                ObjectSerializer::toPathValue($schedule_id),
+                ObjectSerializer::toPathValue($scheduleId),
                 $resourcePath
             );
         }
@@ -855,31 +855,31 @@ class ScheduleApi
     /**
      * Operation getSchedule
      *
-     * @param  string $schedule_id The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\UserScheduleResponse
      */
-    public function getSchedule($schedule_id)
+    public function getSchedule($scheduleId)
     {
-        list($response) = $this->getScheduleWithHttpInfo($schedule_id);
+        list($response) = $this->getScheduleWithHttpInfo($scheduleId);
         return $response;
     }
 
     /**
      * Operation getScheduleWithHttpInfo
      *
-     * @param  string $schedule_id The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\UserScheduleResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getScheduleWithHttpInfo($schedule_id)
+    public function getScheduleWithHttpInfo($scheduleId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\UserScheduleResponse';
-        $request = $this->getScheduleRequest($schedule_id);
+        $request = $this->getScheduleRequest($scheduleId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -945,14 +945,14 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $schedule_id The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getScheduleAsync($schedule_id)
+    public function getScheduleAsync($scheduleId)
     {
-        return $this->getScheduleAsyncWithHttpInfo($schedule_id)
+        return $this->getScheduleAsyncWithHttpInfo($scheduleId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -965,15 +965,15 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $schedule_id The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getScheduleAsyncWithHttpInfo($schedule_id)
+    public function getScheduleAsyncWithHttpInfo($scheduleId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\UserScheduleResponse';
-        $request = $this->getScheduleRequest($schedule_id);
+        $request = $this->getScheduleRequest($scheduleId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1015,17 +1015,17 @@ class ScheduleApi
     /**
      * Create request for operation 'getSchedule'
      *
-     * @param  string $schedule_id The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getScheduleRequest($schedule_id)
+    protected function getScheduleRequest($scheduleId)
     {
-        // verify the required parameter 'schedule_id' is set
-        if ($schedule_id === null || (is_array($schedule_id) && count($schedule_id) === 0)) {
+        // verify the required parameter 'scheduleId' is set
+        if ($scheduleId === null || (is_array($scheduleId) && count($scheduleId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $schedule_id when calling getSchedule'
+                'Missing the required parameter $scheduleId when calling getSchedule'
             );
         }
 
@@ -1038,10 +1038,10 @@ class ScheduleApi
 
 
         // path params
-        if ($schedule_id !== null) {
+        if ($scheduleId !== null) {
             $resourcePath = str_replace(
                 '{' . 'schedule_id' . '}',
-                ObjectSerializer::toPathValue($schedule_id),
+                ObjectSerializer::toPathValue($scheduleId),
                 $resourcePath
             );
         }
@@ -1124,31 +1124,31 @@ class ScheduleApi
     /**
      * Operation getScheduleTemplate
      *
-     * @param  string $schedule_template_id The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
+     * @param  string $scheduleTemplateId The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse
      */
-    public function getScheduleTemplate($schedule_template_id)
+    public function getScheduleTemplate($scheduleTemplateId)
     {
-        list($response) = $this->getScheduleTemplateWithHttpInfo($schedule_template_id);
+        list($response) = $this->getScheduleTemplateWithHttpInfo($scheduleTemplateId);
         return $response;
     }
 
     /**
      * Operation getScheduleTemplateWithHttpInfo
      *
-     * @param  string $schedule_template_id The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
+     * @param  string $scheduleTemplateId The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getScheduleTemplateWithHttpInfo($schedule_template_id)
+    public function getScheduleTemplateWithHttpInfo($scheduleTemplateId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse';
-        $request = $this->getScheduleTemplateRequest($schedule_template_id);
+        $request = $this->getScheduleTemplateRequest($scheduleTemplateId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1214,14 +1214,14 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $schedule_template_id The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
+     * @param  string $scheduleTemplateId The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getScheduleTemplateAsync($schedule_template_id)
+    public function getScheduleTemplateAsync($scheduleTemplateId)
     {
-        return $this->getScheduleTemplateAsyncWithHttpInfo($schedule_template_id)
+        return $this->getScheduleTemplateAsyncWithHttpInfo($scheduleTemplateId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1234,15 +1234,15 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $schedule_template_id The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
+     * @param  string $scheduleTemplateId The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getScheduleTemplateAsyncWithHttpInfo($schedule_template_id)
+    public function getScheduleTemplateAsyncWithHttpInfo($scheduleTemplateId)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse';
-        $request = $this->getScheduleTemplateRequest($schedule_template_id);
+        $request = $this->getScheduleTemplateRequest($scheduleTemplateId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1284,17 +1284,17 @@ class ScheduleApi
     /**
      * Create request for operation 'getScheduleTemplate'
      *
-     * @param  string $schedule_template_id The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
+     * @param  string $scheduleTemplateId The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getScheduleTemplateRequest($schedule_template_id)
+    protected function getScheduleTemplateRequest($scheduleTemplateId)
     {
-        // verify the required parameter 'schedule_template_id' is set
-        if ($schedule_template_id === null || (is_array($schedule_template_id) && count($schedule_template_id) === 0)) {
+        // verify the required parameter 'scheduleTemplateId' is set
+        if ($scheduleTemplateId === null || (is_array($scheduleTemplateId) && count($scheduleTemplateId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $schedule_template_id when calling getScheduleTemplate'
+                'Missing the required parameter $scheduleTemplateId when calling getScheduleTemplate'
             );
         }
 
@@ -1307,10 +1307,10 @@ class ScheduleApi
 
 
         // path params
-        if ($schedule_template_id !== null) {
+        if ($scheduleTemplateId !== null) {
             $resourcePath = str_replace(
                 '{' . 'schedule_template_id' . '}',
-                ObjectSerializer::toPathValue($schedule_template_id),
+                ObjectSerializer::toPathValue($scheduleTemplateId),
                 $resourcePath
             );
         }
@@ -1393,7 +1393,7 @@ class ScheduleApi
     /**
      * Operation getScheduleTemplates
      *
-     * @param  string $feed_type The feed type of the schedule templates to retrieve. (required)
+     * @param  string $feedType The feed type of the schedule templates to retrieve. (required)
      * @param  int $limit The maximum number of schedule templates that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedule templates 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedule templates to skip in the result set before returning the first template in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
@@ -1401,16 +1401,16 @@ class ScheduleApi
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateCollection
      */
-    public function getScheduleTemplates($feed_type, $limit = null, $offset = null)
+    public function getScheduleTemplates($feedType, $limit = null, $offset = null)
     {
-        list($response) = $this->getScheduleTemplatesWithHttpInfo($feed_type, $limit, $offset);
+        list($response) = $this->getScheduleTemplatesWithHttpInfo($feedType, $limit, $offset);
         return $response;
     }
 
     /**
      * Operation getScheduleTemplatesWithHttpInfo
      *
-     * @param  string $feed_type The feed type of the schedule templates to retrieve. (required)
+     * @param  string $feedType The feed type of the schedule templates to retrieve. (required)
      * @param  int $limit The maximum number of schedule templates that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedule templates 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedule templates to skip in the result set before returning the first template in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
@@ -1418,10 +1418,10 @@ class ScheduleApi
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getScheduleTemplatesWithHttpInfo($feed_type, $limit = null, $offset = null)
+    public function getScheduleTemplatesWithHttpInfo($feedType, $limit = null, $offset = null)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateCollection';
-        $request = $this->getScheduleTemplatesRequest($feed_type, $limit, $offset);
+        $request = $this->getScheduleTemplatesRequest($feedType, $limit, $offset);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1487,16 +1487,16 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $feed_type The feed type of the schedule templates to retrieve. (required)
+     * @param  string $feedType The feed type of the schedule templates to retrieve. (required)
      * @param  int $limit The maximum number of schedule templates that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedule templates 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedule templates to skip in the result set before returning the first template in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getScheduleTemplatesAsync($feed_type, $limit = null, $offset = null)
+    public function getScheduleTemplatesAsync($feedType, $limit = null, $offset = null)
     {
-        return $this->getScheduleTemplatesAsyncWithHttpInfo($feed_type, $limit, $offset)
+        return $this->getScheduleTemplatesAsyncWithHttpInfo($feedType, $limit, $offset)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1509,17 +1509,17 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $feed_type The feed type of the schedule templates to retrieve. (required)
+     * @param  string $feedType The feed type of the schedule templates to retrieve. (required)
      * @param  int $limit The maximum number of schedule templates that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedule templates 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedule templates to skip in the result set before returning the first template in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getScheduleTemplatesAsyncWithHttpInfo($feed_type, $limit = null, $offset = null)
+    public function getScheduleTemplatesAsyncWithHttpInfo($feedType, $limit = null, $offset = null)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateCollection';
-        $request = $this->getScheduleTemplatesRequest($feed_type, $limit, $offset);
+        $request = $this->getScheduleTemplatesRequest($feedType, $limit, $offset);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1561,19 +1561,19 @@ class ScheduleApi
     /**
      * Create request for operation 'getScheduleTemplates'
      *
-     * @param  string $feed_type The feed type of the schedule templates to retrieve. (required)
+     * @param  string $feedType The feed type of the schedule templates to retrieve. (required)
      * @param  int $limit The maximum number of schedule templates that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedule templates 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedule templates to skip in the result set before returning the first template in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getScheduleTemplatesRequest($feed_type, $limit = null, $offset = null)
+    protected function getScheduleTemplatesRequest($feedType, $limit = null, $offset = null)
     {
-        // verify the required parameter 'feed_type' is set
-        if ($feed_type === null || (is_array($feed_type) && count($feed_type) === 0)) {
+        // verify the required parameter 'feedType' is set
+        if ($feedType === null || (is_array($feedType) && count($feedType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $feed_type when calling getScheduleTemplates'
+                'Missing the required parameter $feedType when calling getScheduleTemplates'
             );
         }
 
@@ -1585,8 +1585,8 @@ class ScheduleApi
         $multipart = false;
 
         // query params
-        if ($feed_type !== null) {
-            $queryParams['feed_type'] = ObjectSerializer::toQueryValue($feed_type);
+        if ($feedType !== null) {
+            $queryParams['feed_type'] = ObjectSerializer::toQueryValue($feedType);
         }
         // query params
         if ($limit !== null) {
@@ -1676,7 +1676,7 @@ class ScheduleApi
     /**
      * Operation getSchedules
      *
-     * @param  string $feed_type The feedType associated with the schedule. (required)
+     * @param  string $feedType The feedType associated with the schedule. (required)
      * @param  int $limit The maximum number of schedules that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedules 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedules to skip in the result set before returning the first schedule in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
@@ -1684,16 +1684,16 @@ class ScheduleApi
      * @throws \InvalidArgumentException
      * @return \SwaggerEbayFeedApi\Client\Model\UserScheduleCollection
      */
-    public function getSchedules($feed_type, $limit = null, $offset = null)
+    public function getSchedules($feedType, $limit = null, $offset = null)
     {
-        list($response) = $this->getSchedulesWithHttpInfo($feed_type, $limit, $offset);
+        list($response) = $this->getSchedulesWithHttpInfo($feedType, $limit, $offset);
         return $response;
     }
 
     /**
      * Operation getSchedulesWithHttpInfo
      *
-     * @param  string $feed_type The feedType associated with the schedule. (required)
+     * @param  string $feedType The feedType associated with the schedule. (required)
      * @param  int $limit The maximum number of schedules that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedules 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedules to skip in the result set before returning the first schedule in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
@@ -1701,10 +1701,10 @@ class ScheduleApi
      * @throws \InvalidArgumentException
      * @return array of \SwaggerEbayFeedApi\Client\Model\UserScheduleCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getSchedulesWithHttpInfo($feed_type, $limit = null, $offset = null)
+    public function getSchedulesWithHttpInfo($feedType, $limit = null, $offset = null)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\UserScheduleCollection';
-        $request = $this->getSchedulesRequest($feed_type, $limit, $offset);
+        $request = $this->getSchedulesRequest($feedType, $limit, $offset);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1770,16 +1770,16 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $feed_type The feedType associated with the schedule. (required)
+     * @param  string $feedType The feedType associated with the schedule. (required)
      * @param  int $limit The maximum number of schedules that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedules 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedules to skip in the result set before returning the first schedule in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSchedulesAsync($feed_type, $limit = null, $offset = null)
+    public function getSchedulesAsync($feedType, $limit = null, $offset = null)
     {
-        return $this->getSchedulesAsyncWithHttpInfo($feed_type, $limit, $offset)
+        return $this->getSchedulesAsyncWithHttpInfo($feedType, $limit, $offset)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1792,17 +1792,17 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $feed_type The feedType associated with the schedule. (required)
+     * @param  string $feedType The feedType associated with the schedule. (required)
      * @param  int $limit The maximum number of schedules that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedules 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedules to skip in the result set before returning the first schedule in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getSchedulesAsyncWithHttpInfo($feed_type, $limit = null, $offset = null)
+    public function getSchedulesAsyncWithHttpInfo($feedType, $limit = null, $offset = null)
     {
         $returnType = '\SwaggerEbayFeedApi\Client\Model\UserScheduleCollection';
-        $request = $this->getSchedulesRequest($feed_type, $limit, $offset);
+        $request = $this->getSchedulesRequest($feedType, $limit, $offset);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1844,19 +1844,19 @@ class ScheduleApi
     /**
      * Create request for operation 'getSchedules'
      *
-     * @param  string $feed_type The feedType associated with the schedule. (required)
+     * @param  string $feedType The feedType associated with the schedule. (required)
      * @param  int $limit The maximum number of schedules that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedules 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedules to skip in the result set before returning the first schedule in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getSchedulesRequest($feed_type, $limit = null, $offset = null)
+    protected function getSchedulesRequest($feedType, $limit = null, $offset = null)
     {
-        // verify the required parameter 'feed_type' is set
-        if ($feed_type === null || (is_array($feed_type) && count($feed_type) === 0)) {
+        // verify the required parameter 'feedType' is set
+        if ($feedType === null || (is_array($feedType) && count($feedType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $feed_type when calling getSchedules'
+                'Missing the required parameter $feedType when calling getSchedules'
             );
         }
 
@@ -1868,8 +1868,8 @@ class ScheduleApi
         $multipart = false;
 
         // query params
-        if ($feed_type !== null) {
-            $queryParams['feed_type'] = ObjectSerializer::toQueryValue($feed_type);
+        if ($feedType !== null) {
+            $queryParams['feed_type'] = ObjectSerializer::toQueryValue($feedType);
         }
         // query params
         if ($limit !== null) {
@@ -1959,32 +1959,32 @@ class ScheduleApi
     /**
      * Operation updateSchedule
      *
-     * @param  string $schedule_id The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function updateSchedule($schedule_id, $body)
+    public function updateSchedule($scheduleId, $body)
     {
-        $this->updateScheduleWithHttpInfo($schedule_id, $body);
+        $this->updateScheduleWithHttpInfo($scheduleId, $body);
     }
 
     /**
      * Operation updateScheduleWithHttpInfo
      *
-     * @param  string $schedule_id The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
      * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateScheduleWithHttpInfo($schedule_id, $body)
+    public function updateScheduleWithHttpInfo($scheduleId, $body)
     {
         $returnType = '';
-        $request = $this->updateScheduleRequest($schedule_id, $body);
+        $request = $this->updateScheduleRequest($scheduleId, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2028,15 +2028,15 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $schedule_id The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateScheduleAsync($schedule_id, $body)
+    public function updateScheduleAsync($scheduleId, $body)
     {
-        return $this->updateScheduleAsyncWithHttpInfo($schedule_id, $body)
+        return $this->updateScheduleAsyncWithHttpInfo($scheduleId, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2049,16 +2049,16 @@ class ScheduleApi
      *
      * 
      *
-     * @param  string $schedule_id The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateScheduleAsyncWithHttpInfo($schedule_id, $body)
+    public function updateScheduleAsyncWithHttpInfo($scheduleId, $body)
     {
         $returnType = '';
-        $request = $this->updateScheduleRequest($schedule_id, $body);
+        $request = $this->updateScheduleRequest($scheduleId, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2086,18 +2086,18 @@ class ScheduleApi
     /**
      * Create request for operation 'updateSchedule'
      *
-     * @param  string $schedule_id The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
+     * @param  string $scheduleId The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
      * @param  \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function updateScheduleRequest($schedule_id, $body)
+    protected function updateScheduleRequest($scheduleId, $body)
     {
-        // verify the required parameter 'schedule_id' is set
-        if ($schedule_id === null || (is_array($schedule_id) && count($schedule_id) === 0)) {
+        // verify the required parameter 'scheduleId' is set
+        if ($scheduleId === null || (is_array($scheduleId) && count($scheduleId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $schedule_id when calling updateSchedule'
+                'Missing the required parameter $scheduleId when calling updateSchedule'
             );
         }
         // verify the required parameter 'body' is set
@@ -2116,10 +2116,10 @@ class ScheduleApi
 
 
         // path params
-        if ($schedule_id !== null) {
+        if ($scheduleId !== null) {
             $resourcePath = str_replace(
                 '{' . 'schedule_id' . '}',
-                ObjectSerializer::toPathValue($schedule_id),
+                ObjectSerializer::toPathValue($scheduleId),
                 $resourcePath
             );
         }

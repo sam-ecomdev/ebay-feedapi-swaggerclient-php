@@ -58,14 +58,14 @@ class Task implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'completion_date' => 'string',
-        'creation_date' => 'string',
-        'detail_href' => 'string',
-        'feed_type' => 'string',
-        'schema_version' => 'string',
+        'completionDate' => 'string',
+        'creationDate' => 'string',
+        'detailHref' => 'string',
+        'feedType' => 'string',
+        'schemaVersion' => 'string',
         'status' => 'string',
-        'task_id' => 'string',
-        'upload_summary' => '\SwaggerEbayFeedApi\Client\Model\UploadSummary'
+        'taskId' => 'string',
+        'uploadSummary' => '\SwaggerEbayFeedApi\Client\Model\UploadSummary'
     ];
 
     /**
@@ -74,14 +74,14 @@ class Task implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'completion_date' => null,
-        'creation_date' => null,
-        'detail_href' => null,
-        'feed_type' => null,
-        'schema_version' => null,
+        'completionDate' => null,
+        'creationDate' => null,
+        'detailHref' => null,
+        'feedType' => null,
+        'schemaVersion' => null,
         'status' => null,
-        'task_id' => null,
-        'upload_summary' => null
+        'taskId' => null,
+        'uploadSummary' => null
     ];
 
     /**
@@ -111,14 +111,14 @@ class Task implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'completion_date' => 'completionDate',
-        'creation_date' => 'creationDate',
-        'detail_href' => 'detailHref',
-        'feed_type' => 'feedType',
-        'schema_version' => 'schemaVersion',
+        'completionDate' => 'completionDate',
+        'creationDate' => 'creationDate',
+        'detailHref' => 'detailHref',
+        'feedType' => 'feedType',
+        'schemaVersion' => 'schemaVersion',
         'status' => 'status',
-        'task_id' => 'taskId',
-        'upload_summary' => 'uploadSummary'
+        'taskId' => 'taskId',
+        'uploadSummary' => 'uploadSummary'
     ];
 
     /**
@@ -127,14 +127,14 @@ class Task implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'completion_date' => 'setCompletionDate',
-        'creation_date' => 'setCreationDate',
-        'detail_href' => 'setDetailHref',
-        'feed_type' => 'setFeedType',
-        'schema_version' => 'setSchemaVersion',
+        'completionDate' => 'setCompletionDate',
+        'creationDate' => 'setCreationDate',
+        'detailHref' => 'setDetailHref',
+        'feedType' => 'setFeedType',
+        'schemaVersion' => 'setSchemaVersion',
         'status' => 'setStatus',
-        'task_id' => 'setTaskId',
-        'upload_summary' => 'setUploadSummary'
+        'taskId' => 'setTaskId',
+        'uploadSummary' => 'setUploadSummary'
     ];
 
     /**
@@ -143,14 +143,14 @@ class Task implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'completion_date' => 'getCompletionDate',
-        'creation_date' => 'getCreationDate',
-        'detail_href' => 'getDetailHref',
-        'feed_type' => 'getFeedType',
-        'schema_version' => 'getSchemaVersion',
+        'completionDate' => 'getCompletionDate',
+        'creationDate' => 'getCreationDate',
+        'detailHref' => 'getDetailHref',
+        'feedType' => 'getFeedType',
+        'schemaVersion' => 'getSchemaVersion',
         'status' => 'getStatus',
-        'task_id' => 'getTaskId',
-        'upload_summary' => 'getUploadSummary'
+        'taskId' => 'getTaskId',
+        'uploadSummary' => 'getUploadSummary'
     ];
 
     /**
@@ -213,14 +213,14 @@ class Task implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['completion_date'] = isset($data['completion_date']) ? $data['completion_date'] : null;
-        $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
-        $this->container['detail_href'] = isset($data['detail_href']) ? $data['detail_href'] : null;
-        $this->container['feed_type'] = isset($data['feed_type']) ? $data['feed_type'] : null;
-        $this->container['schema_version'] = isset($data['schema_version']) ? $data['schema_version'] : null;
+        $this->container['completionDate'] = isset($data['completionDate']) ? $data['completionDate'] : null;
+        $this->container['creationDate'] = isset($data['creationDate']) ? $data['creationDate'] : null;
+        $this->container['detailHref'] = isset($data['detailHref']) ? $data['detailHref'] : null;
+        $this->container['feedType'] = isset($data['feedType']) ? $data['feedType'] : null;
+        $this->container['schemaVersion'] = isset($data['schemaVersion']) ? $data['schemaVersion'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['task_id'] = isset($data['task_id']) ? $data['task_id'] : null;
-        $this->container['upload_summary'] = isset($data['upload_summary']) ? $data['upload_summary'] : null;
+        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
+        $this->container['uploadSummary'] = isset($data['uploadSummary']) ? $data['uploadSummary'] : null;
     }
 
     /**
@@ -248,121 +248,121 @@ class Task implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets completion_date
+     * Gets completionDate
      *
      * @return string
      */
     public function getCompletionDate()
     {
-        return $this->container['completion_date'];
+        return $this->container['completionDate'];
     }
 
     /**
-     * Sets completion_date
+     * Sets completionDate
      *
-     * @param string $completion_date The timestamp when the task went into the COMPLETED or COMPLETED_WITH_ERROR state. This state means that eBay has compiled the report for the seller based on the seller&rsquo;s filter criteria, and the seller can run a getResultFile call to download the report.
+     * @param string $completionDate The timestamp when the task went into the COMPLETED or COMPLETED_WITH_ERROR state. This state means that eBay has compiled the report for the seller based on the seller&rsquo;s filter criteria, and the seller can run a getResultFile call to download the report.
      *
      * @return $this
      */
-    public function setCompletionDate($completion_date)
+    public function setCompletionDate($completionDate)
     {
-        $this->container['completion_date'] = $completion_date;
+        $this->container['completionDate'] = $completionDate;
 
         return $this;
     }
 
     /**
-     * Gets creation_date
+     * Gets creationDate
      *
      * @return string
      */
     public function getCreationDate()
     {
-        return $this->container['creation_date'];
+        return $this->container['creationDate'];
     }
 
     /**
-     * Sets creation_date
+     * Sets creationDate
      *
-     * @param string $creation_date The date the task was created.
+     * @param string $creationDate The date the task was created.
      *
      * @return $this
      */
-    public function setCreationDate($creation_date)
+    public function setCreationDate($creationDate)
     {
-        $this->container['creation_date'] = $creation_date;
+        $this->container['creationDate'] = $creationDate;
 
         return $this;
     }
 
     /**
-     * Gets detail_href
+     * Gets detailHref
      *
      * @return string
      */
     public function getDetailHref()
     {
-        return $this->container['detail_href'];
+        return $this->container['detailHref'];
     }
 
     /**
-     * Sets detail_href
+     * Sets detailHref
      *
-     * @param string $detail_href The path to the call URI used to retrieve the task. This field points to the GetOrderTask URI if the task is for LMS_ORDER_REPORT or will be null if this task is for LMS_ORDER_ACK.
+     * @param string $detailHref The path to the call URI used to retrieve the task. This field points to the GetOrderTask URI if the task is for LMS_ORDER_REPORT or will be null if this task is for LMS_ORDER_ACK.
      *
      * @return $this
      */
-    public function setDetailHref($detail_href)
+    public function setDetailHref($detailHref)
     {
-        $this->container['detail_href'] = $detail_href;
+        $this->container['detailHref'] = $detailHref;
 
         return $this;
     }
 
     /**
-     * Gets feed_type
+     * Gets feedType
      *
      * @return string
      */
     public function getFeedType()
     {
-        return $this->container['feed_type'];
+        return $this->container['feedType'];
     }
 
     /**
-     * Sets feed_type
+     * Sets feedType
      *
-     * @param string $feed_type The feed type associated with the task.
+     * @param string $feedType The feed type associated with the task.
      *
      * @return $this
      */
-    public function setFeedType($feed_type)
+    public function setFeedType($feedType)
     {
-        $this->container['feed_type'] = $feed_type;
+        $this->container['feedType'] = $feedType;
 
         return $this;
     }
 
     /**
-     * Gets schema_version
+     * Gets schemaVersion
      *
      * @return string
      */
     public function getSchemaVersion()
     {
-        return $this->container['schema_version'];
+        return $this->container['schemaVersion'];
     }
 
     /**
-     * Sets schema_version
+     * Sets schemaVersion
      *
-     * @param string $schema_version The schema version number associated with the task.
+     * @param string $schemaVersion The schema version number associated with the task.
      *
      * @return $this
      */
-    public function setSchemaVersion($schema_version)
+    public function setSchemaVersion($schemaVersion)
     {
-        $this->container['schema_version'] = $schema_version;
+        $this->container['schemaVersion'] = $schemaVersion;
 
         return $this;
     }
@@ -392,49 +392,49 @@ class Task implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets task_id
+     * Gets taskId
      *
      * @return string
      */
     public function getTaskId()
     {
-        return $this->container['task_id'];
+        return $this->container['taskId'];
     }
 
     /**
-     * Sets task_id
+     * Sets taskId
      *
-     * @param string $task_id The ID of the task that was submitted in the request.
+     * @param string $taskId The ID of the task that was submitted in the request.
      *
      * @return $this
      */
-    public function setTaskId($task_id)
+    public function setTaskId($taskId)
     {
-        $this->container['task_id'] = $task_id;
+        $this->container['taskId'] = $taskId;
 
         return $this;
     }
 
     /**
-     * Gets upload_summary
+     * Gets uploadSummary
      *
      * @return \SwaggerEbayFeedApi\Client\Model\UploadSummary
      */
     public function getUploadSummary()
     {
-        return $this->container['upload_summary'];
+        return $this->container['uploadSummary'];
     }
 
     /**
-     * Sets upload_summary
+     * Sets uploadSummary
      *
-     * @param \SwaggerEbayFeedApi\Client\Model\UploadSummary $upload_summary upload_summary
+     * @param \SwaggerEbayFeedApi\Client\Model\UploadSummary $uploadSummary uploadSummary
      *
      * @return $this
      */
-    public function setUploadSummary($upload_summary)
+    public function setUploadSummary($uploadSummary)
     {
-        $this->container['upload_summary'] = $upload_summary;
+        $this->container['uploadSummary'] = $uploadSummary;
 
         return $this;
     }

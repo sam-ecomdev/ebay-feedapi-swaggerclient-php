@@ -58,12 +58,12 @@ class FormDataContentDisposition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'creation_date' => 'string',
-        'file_name' => 'string',
-        'modification_date' => 'string',
+        'creationDate' => 'string',
+        'fileName' => 'string',
+        'modificationDate' => 'string',
         'name' => 'string',
         'parameters' => 'map[string,string]',
-        'read_date' => 'string',
+        'readDate' => 'string',
         'size' => 'int',
         'type' => 'string'
     ];
@@ -74,12 +74,12 @@ class FormDataContentDisposition implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'creation_date' => null,
-        'file_name' => null,
-        'modification_date' => null,
+        'creationDate' => null,
+        'fileName' => null,
+        'modificationDate' => null,
         'name' => null,
         'parameters' => null,
-        'read_date' => null,
+        'readDate' => null,
         'size' => null,
         'type' => null
     ];
@@ -111,12 +111,12 @@ class FormDataContentDisposition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'creation_date' => 'creationDate',
-        'file_name' => 'fileName',
-        'modification_date' => 'modificationDate',
+        'creationDate' => 'creationDate',
+        'fileName' => 'fileName',
+        'modificationDate' => 'modificationDate',
         'name' => 'name',
         'parameters' => 'parameters',
-        'read_date' => 'readDate',
+        'readDate' => 'readDate',
         'size' => 'size',
         'type' => 'type'
     ];
@@ -127,12 +127,12 @@ class FormDataContentDisposition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'creation_date' => 'setCreationDate',
-        'file_name' => 'setFileName',
-        'modification_date' => 'setModificationDate',
+        'creationDate' => 'setCreationDate',
+        'fileName' => 'setFileName',
+        'modificationDate' => 'setModificationDate',
         'name' => 'setName',
         'parameters' => 'setParameters',
-        'read_date' => 'setReadDate',
+        'readDate' => 'setReadDate',
         'size' => 'setSize',
         'type' => 'setType'
     ];
@@ -143,12 +143,12 @@ class FormDataContentDisposition implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'creation_date' => 'getCreationDate',
-        'file_name' => 'getFileName',
-        'modification_date' => 'getModificationDate',
+        'creationDate' => 'getCreationDate',
+        'fileName' => 'getFileName',
+        'modificationDate' => 'getModificationDate',
         'name' => 'getName',
         'parameters' => 'getParameters',
-        'read_date' => 'getReadDate',
+        'readDate' => 'getReadDate',
         'size' => 'getSize',
         'type' => 'getType'
     ];
@@ -213,12 +213,12 @@ class FormDataContentDisposition implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['creation_date'] = isset($data['creation_date']) ? $data['creation_date'] : null;
-        $this->container['file_name'] = isset($data['file_name']) ? $data['file_name'] : null;
-        $this->container['modification_date'] = isset($data['modification_date']) ? $data['modification_date'] : null;
+        $this->container['creationDate'] = isset($data['creationDate']) ? $data['creationDate'] : null;
+        $this->container['fileName'] = isset($data['fileName']) ? $data['fileName'] : null;
+        $this->container['modificationDate'] = isset($data['modificationDate']) ? $data['modificationDate'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
-        $this->container['read_date'] = isset($data['read_date']) ? $data['read_date'] : null;
+        $this->container['readDate'] = isset($data['readDate']) ? $data['readDate'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
@@ -248,73 +248,73 @@ class FormDataContentDisposition implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets creation_date
+     * Gets creationDate
      *
      * @return string
      */
     public function getCreationDate()
     {
-        return $this->container['creation_date'];
+        return $this->container['creationDate'];
     }
 
     /**
-     * Sets creation_date
+     * Sets creationDate
      *
-     * @param string $creation_date The file creation date. Format: UTC yyyy-MM-ddThh:mm:ss.SSSZ For example: Created on September 8, 2019 2019-09-08T00:00:00.000Z
+     * @param string $creationDate The file creation date. Format: UTC yyyy-MM-ddThh:mm:ss.SSSZ For example: Created on September 8, 2019 2019-09-08T00:00:00.000Z
      *
      * @return $this
      */
-    public function setCreationDate($creation_date)
+    public function setCreationDate($creationDate)
     {
-        $this->container['creation_date'] = $creation_date;
+        $this->container['creationDate'] = $creationDate;
 
         return $this;
     }
 
     /**
-     * Gets file_name
+     * Gets fileName
      *
      * @return string
      */
     public function getFileName()
     {
-        return $this->container['file_name'];
+        return $this->container['fileName'];
     }
 
     /**
-     * Sets file_name
+     * Sets fileName
      *
-     * @param string $file_name The name of the file including its extension (for example, xml or csv) to be uploaded.
+     * @param string $fileName The name of the file including its extension (for example, xml or csv) to be uploaded.
      *
      * @return $this
      */
-    public function setFileName($file_name)
+    public function setFileName($fileName)
     {
-        $this->container['file_name'] = $file_name;
+        $this->container['fileName'] = $fileName;
 
         return $this;
     }
 
     /**
-     * Gets modification_date
+     * Gets modificationDate
      *
      * @return string
      */
     public function getModificationDate()
     {
-        return $this->container['modification_date'];
+        return $this->container['modificationDate'];
     }
 
     /**
-     * Sets modification_date
+     * Sets modificationDate
      *
-     * @param string $modification_date The file modified date. Format: UTC yyyy-MM-ddThh:mm:ss.SSSZ For example: Created on September 9, 2019 2019-09-09T00:00:00.000Z
+     * @param string $modificationDate The file modified date. Format: UTC yyyy-MM-ddThh:mm:ss.SSSZ For example: Created on September 9, 2019 2019-09-09T00:00:00.000Z
      *
      * @return $this
      */
-    public function setModificationDate($modification_date)
+    public function setModificationDate($modificationDate)
     {
-        $this->container['modification_date'] = $modification_date;
+        $this->container['modificationDate'] = $modificationDate;
 
         return $this;
     }
@@ -368,25 +368,25 @@ class FormDataContentDisposition implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets read_date
+     * Gets readDate
      *
      * @return string
      */
     public function getReadDate()
     {
-        return $this->container['read_date'];
+        return $this->container['readDate'];
     }
 
     /**
-     * Sets read_date
+     * Sets readDate
      *
-     * @param string $read_date The date you read the file. Format: UTC yyyy-MM-ddThh:mm:ss.SSSZ For example: Created on September 10, 2019 2019-09-10T00:00:00.000Z
+     * @param string $readDate The date you read the file. Format: UTC yyyy-MM-ddThh:mm:ss.SSSZ For example: Created on September 10, 2019 2019-09-10T00:00:00.000Z
      *
      * @return $this
      */
-    public function setReadDate($read_date)
+    public function setReadDate($readDate)
     {
-        $this->container['read_date'] = $read_date;
+        $this->container['readDate'] = $readDate;
 
         return $this;
     }

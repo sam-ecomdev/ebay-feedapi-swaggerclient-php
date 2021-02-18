@@ -58,8 +58,8 @@ class UploadSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'failure_count' => 'int',
-        'success_count' => 'int'
+        'failureCount' => 'int',
+        'successCount' => 'int'
     ];
 
     /**
@@ -68,8 +68,8 @@ class UploadSummary implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'failure_count' => null,
-        'success_count' => null
+        'failureCount' => null,
+        'successCount' => null
     ];
 
     /**
@@ -99,8 +99,8 @@ class UploadSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'failure_count' => 'failureCount',
-        'success_count' => 'successCount'
+        'failureCount' => 'failureCount',
+        'successCount' => 'successCount'
     ];
 
     /**
@@ -109,8 +109,8 @@ class UploadSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'failure_count' => 'setFailureCount',
-        'success_count' => 'setSuccessCount'
+        'failureCount' => 'setFailureCount',
+        'successCount' => 'setSuccessCount'
     ];
 
     /**
@@ -119,8 +119,8 @@ class UploadSummary implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'failure_count' => 'getFailureCount',
-        'success_count' => 'getSuccessCount'
+        'failureCount' => 'getFailureCount',
+        'successCount' => 'getSuccessCount'
     ];
 
     /**
@@ -183,8 +183,8 @@ class UploadSummary implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['failure_count'] = isset($data['failure_count']) ? $data['failure_count'] : null;
-        $this->container['success_count'] = isset($data['success_count']) ? $data['success_count'] : null;
+        $this->container['failureCount'] = isset($data['failureCount']) ? $data['failureCount'] : null;
+        $this->container['successCount'] = isset($data['successCount']) ? $data['successCount'] : null;
     }
 
     /**
@@ -212,49 +212,49 @@ class UploadSummary implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets failure_count
+     * Gets failureCount
      *
      * @return int
      */
     public function getFailureCount()
     {
-        return $this->container['failure_count'];
+        return $this->container['failureCount'];
     }
 
     /**
-     * Sets failure_count
+     * Sets failureCount
      *
-     * @param int $failure_count The number of records that failed to process during the upload feed.
+     * @param int $failureCount The number of records that failed to process during the upload feed.
      *
      * @return $this
      */
-    public function setFailureCount($failure_count)
+    public function setFailureCount($failureCount)
     {
-        $this->container['failure_count'] = $failure_count;
+        $this->container['failureCount'] = $failureCount;
 
         return $this;
     }
 
     /**
-     * Gets success_count
+     * Gets successCount
      *
      * @return int
      */
     public function getSuccessCount()
     {
-        return $this->container['success_count'];
+        return $this->container['successCount'];
     }
 
     /**
-     * Sets success_count
+     * Sets successCount
      *
-     * @param int $success_count The number of records that were successfully processed during the upload feed.
+     * @param int $successCount The number of records that were successfully processed during the upload feed.
      *
      * @return $this
      */
-    public function setSuccessCount($success_count)
+    public function setSuccessCount($successCount)
     {
-        $this->container['success_count'] = $success_count;
+        $this->container['successCount'] = $successCount;
 
         return $this;
     }

@@ -58,12 +58,12 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'feed_type' => 'string',
+        'feedType' => 'string',
         'frequency' => 'string',
         'name' => 'string',
-        'schedule_template_id' => 'string',
+        'scheduleTemplateId' => 'string',
         'status' => 'string',
-        'supported_configurations' => '\SwaggerEbayFeedApi\Client\Model\SupportedConfiguration[]'
+        'supportedConfigurations' => '\SwaggerEbayFeedApi\Client\Model\SupportedConfiguration[]'
     ];
 
     /**
@@ -72,12 +72,12 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'feed_type' => null,
+        'feedType' => null,
         'frequency' => null,
         'name' => null,
-        'schedule_template_id' => null,
+        'scheduleTemplateId' => null,
         'status' => null,
-        'supported_configurations' => null
+        'supportedConfigurations' => null
     ];
 
     /**
@@ -107,12 +107,12 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'feed_type' => 'feedType',
+        'feedType' => 'feedType',
         'frequency' => 'frequency',
         'name' => 'name',
-        'schedule_template_id' => 'scheduleTemplateId',
+        'scheduleTemplateId' => 'scheduleTemplateId',
         'status' => 'status',
-        'supported_configurations' => 'supportedConfigurations'
+        'supportedConfigurations' => 'supportedConfigurations'
     ];
 
     /**
@@ -121,12 +121,12 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'feed_type' => 'setFeedType',
+        'feedType' => 'setFeedType',
         'frequency' => 'setFrequency',
         'name' => 'setName',
-        'schedule_template_id' => 'setScheduleTemplateId',
+        'scheduleTemplateId' => 'setScheduleTemplateId',
         'status' => 'setStatus',
-        'supported_configurations' => 'setSupportedConfigurations'
+        'supportedConfigurations' => 'setSupportedConfigurations'
     ];
 
     /**
@@ -135,12 +135,12 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'feed_type' => 'getFeedType',
+        'feedType' => 'getFeedType',
         'frequency' => 'getFrequency',
         'name' => 'getName',
-        'schedule_template_id' => 'getScheduleTemplateId',
+        'scheduleTemplateId' => 'getScheduleTemplateId',
         'status' => 'getStatus',
-        'supported_configurations' => 'getSupportedConfigurations'
+        'supportedConfigurations' => 'getSupportedConfigurations'
     ];
 
     /**
@@ -203,12 +203,12 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['feed_type'] = isset($data['feed_type']) ? $data['feed_type'] : null;
+        $this->container['feedType'] = isset($data['feedType']) ? $data['feedType'] : null;
         $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['schedule_template_id'] = isset($data['schedule_template_id']) ? $data['schedule_template_id'] : null;
+        $this->container['scheduleTemplateId'] = isset($data['scheduleTemplateId']) ? $data['scheduleTemplateId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['supported_configurations'] = isset($data['supported_configurations']) ? $data['supported_configurations'] : null;
+        $this->container['supportedConfigurations'] = isset($data['supportedConfigurations']) ? $data['supportedConfigurations'] : null;
     }
 
     /**
@@ -236,25 +236,25 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets feed_type
+     * Gets feedType
      *
      * @return string
      */
     public function getFeedType()
     {
-        return $this->container['feed_type'];
+        return $this->container['feedType'];
     }
 
     /**
-     * Sets feed_type
+     * Sets feedType
      *
-     * @param string $feed_type The feed type of the schedule template. Note: When calling createSchedule and updateSchedule methods you must match the feed type specified by the schedule template (this feedType).
+     * @param string $feedType The feed type of the schedule template. Note: When calling createSchedule and updateSchedule methods you must match the feed type specified by the schedule template (this feedType).
      *
      * @return $this
      */
-    public function setFeedType($feed_type)
+    public function setFeedType($feedType)
     {
-        $this->container['feed_type'] = $feed_type;
+        $this->container['feedType'] = $feedType;
 
         return $this;
     }
@@ -308,25 +308,25 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets schedule_template_id
+     * Gets scheduleTemplateId
      *
      * @return string
      */
     public function getScheduleTemplateId()
     {
-        return $this->container['schedule_template_id'];
+        return $this->container['scheduleTemplateId'];
     }
 
     /**
-     * Sets schedule_template_id
+     * Sets scheduleTemplateId
      *
-     * @param string $schedule_template_id The ID of the template. Use this ID to create a schedule based on the properties of this schedule template.
+     * @param string $scheduleTemplateId The ID of the template. Use this ID to create a schedule based on the properties of this schedule template.
      *
      * @return $this
      */
-    public function setScheduleTemplateId($schedule_template_id)
+    public function setScheduleTemplateId($scheduleTemplateId)
     {
-        $this->container['schedule_template_id'] = $schedule_template_id;
+        $this->container['scheduleTemplateId'] = $scheduleTemplateId;
 
         return $this;
     }
@@ -356,25 +356,25 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets supported_configurations
+     * Gets supportedConfigurations
      *
      * @return \SwaggerEbayFeedApi\Client\Model\SupportedConfiguration[]
      */
     public function getSupportedConfigurations()
     {
-        return $this->container['supported_configurations'];
+        return $this->container['supportedConfigurations'];
     }
 
     /**
-     * Sets supported_configurations
+     * Sets supportedConfigurations
      *
-     * @param \SwaggerEbayFeedApi\Client\Model\SupportedConfiguration[] $supported_configurations An array of the configuration supported by this template.
+     * @param \SwaggerEbayFeedApi\Client\Model\SupportedConfiguration[] $supportedConfigurations An array of the configuration supported by this template.
      *
      * @return $this
      */
-    public function setSupportedConfigurations($supported_configurations)
+    public function setSupportedConfigurations($supportedConfigurations)
     {
-        $this->container['supported_configurations'] = $supported_configurations;
+        $this->container['supportedConfigurations'] = $supportedConfigurations;
 
         return $this;
     }

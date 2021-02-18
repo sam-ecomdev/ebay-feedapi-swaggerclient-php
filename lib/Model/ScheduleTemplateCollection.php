@@ -63,7 +63,7 @@ class ScheduleTemplateCollection implements ModelInterface, ArrayAccess
         'next' => 'string',
         'offset' => 'int',
         'prev' => 'string',
-        'schedule_templates' => '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse[]',
+        'scheduleTemplates' => '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse[]',
         'total' => 'int'
     ];
 
@@ -78,7 +78,7 @@ class ScheduleTemplateCollection implements ModelInterface, ArrayAccess
         'next' => null,
         'offset' => null,
         'prev' => null,
-        'schedule_templates' => null,
+        'scheduleTemplates' => null,
         'total' => null
     ];
 
@@ -114,7 +114,7 @@ class ScheduleTemplateCollection implements ModelInterface, ArrayAccess
         'next' => 'next',
         'offset' => 'offset',
         'prev' => 'prev',
-        'schedule_templates' => 'scheduleTemplates',
+        'scheduleTemplates' => 'scheduleTemplates',
         'total' => 'total'
     ];
 
@@ -129,7 +129,7 @@ class ScheduleTemplateCollection implements ModelInterface, ArrayAccess
         'next' => 'setNext',
         'offset' => 'setOffset',
         'prev' => 'setPrev',
-        'schedule_templates' => 'setScheduleTemplates',
+        'scheduleTemplates' => 'setScheduleTemplates',
         'total' => 'setTotal'
     ];
 
@@ -144,7 +144,7 @@ class ScheduleTemplateCollection implements ModelInterface, ArrayAccess
         'next' => 'getNext',
         'offset' => 'getOffset',
         'prev' => 'getPrev',
-        'schedule_templates' => 'getScheduleTemplates',
+        'scheduleTemplates' => 'getScheduleTemplates',
         'total' => 'getTotal'
     ];
 
@@ -213,7 +213,7 @@ class ScheduleTemplateCollection implements ModelInterface, ArrayAccess
         $this->container['next'] = isset($data['next']) ? $data['next'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['prev'] = isset($data['prev']) ? $data['prev'] : null;
-        $this->container['schedule_templates'] = isset($data['schedule_templates']) ? $data['schedule_templates'] : null;
+        $this->container['scheduleTemplates'] = isset($data['scheduleTemplates']) ? $data['scheduleTemplates'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
@@ -362,25 +362,25 @@ class ScheduleTemplateCollection implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets schedule_templates
+     * Gets scheduleTemplates
      *
      * @return \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse[]
      */
     public function getScheduleTemplates()
     {
-        return $this->container['schedule_templates'];
+        return $this->container['scheduleTemplates'];
     }
 
     /**
-     * Sets schedule_templates
+     * Sets scheduleTemplates
      *
-     * @param \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse[] $schedule_templates An array of the schedule templates on this page. An empty array is returned if the filter criteria excludes all tasks.
+     * @param \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse[] $scheduleTemplates An array of the schedule templates on this page. An empty array is returned if the filter criteria excludes all tasks.
      *
      * @return $this
      */
-    public function setScheduleTemplates($schedule_templates)
+    public function setScheduleTemplates($scheduleTemplates)
     {
-        $this->container['schedule_templates'] = $schedule_templates;
+        $this->container['scheduleTemplates'] = $scheduleTemplates;
 
         return $this;
     }

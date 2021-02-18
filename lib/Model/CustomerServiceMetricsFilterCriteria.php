@@ -58,10 +58,10 @@ class CustomerServiceMetricsFilterCriteria implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'customer_service_metric_type' => 'string',
-        'evaluation_marketplace_id' => 'string',
-        'listing_categories' => 'string[]',
-        'shipping_regions' => 'string[]'
+        'customerServiceMetricType' => 'string',
+        'evaluationMarketplaceId' => 'string',
+        'listingCategories' => 'string[]',
+        'shippingRegions' => 'string[]'
     ];
 
     /**
@@ -70,10 +70,10 @@ class CustomerServiceMetricsFilterCriteria implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'customer_service_metric_type' => null,
-        'evaluation_marketplace_id' => null,
-        'listing_categories' => null,
-        'shipping_regions' => null
+        'customerServiceMetricType' => null,
+        'evaluationMarketplaceId' => null,
+        'listingCategories' => null,
+        'shippingRegions' => null
     ];
 
     /**
@@ -103,10 +103,10 @@ class CustomerServiceMetricsFilterCriteria implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'customer_service_metric_type' => 'customerServiceMetricType',
-        'evaluation_marketplace_id' => 'evaluationMarketplaceId',
-        'listing_categories' => 'listingCategories',
-        'shipping_regions' => 'shippingRegions'
+        'customerServiceMetricType' => 'customerServiceMetricType',
+        'evaluationMarketplaceId' => 'evaluationMarketplaceId',
+        'listingCategories' => 'listingCategories',
+        'shippingRegions' => 'shippingRegions'
     ];
 
     /**
@@ -115,10 +115,10 @@ class CustomerServiceMetricsFilterCriteria implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'customer_service_metric_type' => 'setCustomerServiceMetricType',
-        'evaluation_marketplace_id' => 'setEvaluationMarketplaceId',
-        'listing_categories' => 'setListingCategories',
-        'shipping_regions' => 'setShippingRegions'
+        'customerServiceMetricType' => 'setCustomerServiceMetricType',
+        'evaluationMarketplaceId' => 'setEvaluationMarketplaceId',
+        'listingCategories' => 'setListingCategories',
+        'shippingRegions' => 'setShippingRegions'
     ];
 
     /**
@@ -127,10 +127,10 @@ class CustomerServiceMetricsFilterCriteria implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'customer_service_metric_type' => 'getCustomerServiceMetricType',
-        'evaluation_marketplace_id' => 'getEvaluationMarketplaceId',
-        'listing_categories' => 'getListingCategories',
-        'shipping_regions' => 'getShippingRegions'
+        'customerServiceMetricType' => 'getCustomerServiceMetricType',
+        'evaluationMarketplaceId' => 'getEvaluationMarketplaceId',
+        'listingCategories' => 'getListingCategories',
+        'shippingRegions' => 'getShippingRegions'
     ];
 
     /**
@@ -193,10 +193,10 @@ class CustomerServiceMetricsFilterCriteria implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->container['customer_service_metric_type'] = isset($data['customer_service_metric_type']) ? $data['customer_service_metric_type'] : null;
-        $this->container['evaluation_marketplace_id'] = isset($data['evaluation_marketplace_id']) ? $data['evaluation_marketplace_id'] : null;
-        $this->container['listing_categories'] = isset($data['listing_categories']) ? $data['listing_categories'] : null;
-        $this->container['shipping_regions'] = isset($data['shipping_regions']) ? $data['shipping_regions'] : null;
+        $this->container['customerServiceMetricType'] = isset($data['customerServiceMetricType']) ? $data['customerServiceMetricType'] : null;
+        $this->container['evaluationMarketplaceId'] = isset($data['evaluationMarketplaceId']) ? $data['evaluationMarketplaceId'] : null;
+        $this->container['listingCategories'] = isset($data['listingCategories']) ? $data['listingCategories'] : null;
+        $this->container['shippingRegions'] = isset($data['shippingRegions']) ? $data['shippingRegions'] : null;
     }
 
     /**
@@ -224,97 +224,97 @@ class CustomerServiceMetricsFilterCriteria implements ModelInterface, ArrayAcces
 
 
     /**
-     * Gets customer_service_metric_type
+     * Gets customerServiceMetricType
      *
      * @return string
      */
     public function getCustomerServiceMetricType()
     {
-        return $this->container['customer_service_metric_type'];
+        return $this->container['customerServiceMetricType'];
     }
 
     /**
-     * Sets customer_service_metric_type
+     * Sets customerServiceMetricType
      *
-     * @param string $customer_service_metric_type An enumeration value that specifies the customer service metric that eBay tracks to measure seller performance. See CustomerServiceMetricTypeEnum for values. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:CustomerServiceMetricTypeEnum'>eBay API documentation</a>
+     * @param string $customerServiceMetricType An enumeration value that specifies the customer service metric that eBay tracks to measure seller performance. See CustomerServiceMetricTypeEnum for values. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:CustomerServiceMetricTypeEnum'>eBay API documentation</a>
      *
      * @return $this
      */
-    public function setCustomerServiceMetricType($customer_service_metric_type)
+    public function setCustomerServiceMetricType($customerServiceMetricType)
     {
-        $this->container['customer_service_metric_type'] = $customer_service_metric_type;
+        $this->container['customerServiceMetricType'] = $customerServiceMetricType;
 
         return $this;
     }
 
     /**
-     * Gets evaluation_marketplace_id
+     * Gets evaluationMarketplaceId
      *
      * @return string
      */
     public function getEvaluationMarketplaceId()
     {
-        return $this->container['evaluation_marketplace_id'];
+        return $this->container['evaluationMarketplaceId'];
     }
 
     /**
-     * Sets evaluation_marketplace_id
+     * Sets evaluationMarketplaceId
      *
-     * @param string $evaluation_marketplace_id An enumeration value that specifies the eBay marketplace where the evaluation occurs. See MarketplaceIdEnum for values. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/bas:MarketplaceIdEnum'>eBay API documentation</a>
+     * @param string $evaluationMarketplaceId An enumeration value that specifies the eBay marketplace where the evaluation occurs. See MarketplaceIdEnum for values. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/bas:MarketplaceIdEnum'>eBay API documentation</a>
      *
      * @return $this
      */
-    public function setEvaluationMarketplaceId($evaluation_marketplace_id)
+    public function setEvaluationMarketplaceId($evaluationMarketplaceId)
     {
-        $this->container['evaluation_marketplace_id'] = $evaluation_marketplace_id;
+        $this->container['evaluationMarketplaceId'] = $evaluationMarketplaceId;
 
         return $this;
     }
 
     /**
-     * Gets listing_categories
+     * Gets listingCategories
      *
      * @return string[]
      */
     public function getListingCategories()
     {
-        return $this->container['listing_categories'];
+        return $this->container['listingCategories'];
     }
 
     /**
-     * Sets listing_categories
+     * Sets listingCategories
      *
-     * @param string[] $listing_categories A list of listing category IDs on which the service metric is measured. A seller can use one or more L1 (top-level) eBay categories to get metrics specific to those L1 categories. The Category IDs for each L1 category are required. Category ID values for L1 categories can be retrieved using the Taxonomy API. Note: Pass this attribute to narrow down your filter results for the ITEM_NOT_AS_DESCRIBED customerServiceMetricType. Supported categories include: primary(L1) category Id
+     * @param string[] $listingCategories A list of listing category IDs on which the service metric is measured. A seller can use one or more L1 (top-level) eBay categories to get metrics specific to those L1 categories. The Category IDs for each L1 category are required. Category ID values for L1 categories can be retrieved using the Taxonomy API. Note: Pass this attribute to narrow down your filter results for the ITEM_NOT_AS_DESCRIBED customerServiceMetricType. Supported categories include: primary(L1) category Id
      *
      * @return $this
      */
-    public function setListingCategories($listing_categories)
+    public function setListingCategories($listingCategories)
     {
-        $this->container['listing_categories'] = $listing_categories;
+        $this->container['listingCategories'] = $listingCategories;
 
         return $this;
     }
 
     /**
-     * Gets shipping_regions
+     * Gets shippingRegions
      *
      * @return string[]
      */
     public function getShippingRegions()
     {
-        return $this->container['shipping_regions'];
+        return $this->container['shippingRegions'];
     }
 
     /**
-     * Sets shipping_regions
+     * Sets shippingRegions
      *
-     * @param string[] $shipping_regions A list of shipping region enumeration values on which the service metric is measured. This comma delimited array allows the seller to customize the report to focus on domestic or international shipping. Note: Pass this attribute to narrow down your filter results for the ITEM_NOT_RECEIVED customerServiceMetricType. Supported categories include: primary(L1) category IdSee ShippingRegionTypeEnum for values
+     * @param string[] $shippingRegions A list of shipping region enumeration values on which the service metric is measured. This comma delimited array allows the seller to customize the report to focus on domestic or international shipping. Note: Pass this attribute to narrow down your filter results for the ITEM_NOT_RECEIVED customerServiceMetricType. Supported categories include: primary(L1) category IdSee ShippingRegionTypeEnum for values
      *
      * @return $this
      */
-    public function setShippingRegions($shipping_regions)
+    public function setShippingRegions($shippingRegions)
     {
-        $this->container['shipping_regions'] = $shipping_regions;
+        $this->container['shippingRegions'] = $shippingRegions;
 
         return $this;
     }
