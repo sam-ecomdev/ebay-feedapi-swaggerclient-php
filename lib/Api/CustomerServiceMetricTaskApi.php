@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace SwaggerEbayFeedApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use SwaggerEbayFeedApi\Client\ApiException;
+use SwaggerEbayFeedApi\Client\Configuration;
+use SwaggerEbayFeedApi\Client\HeaderSelector;
+use SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * CustomerServiceMetricTaskApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,9 +91,9 @@ class CustomerServiceMetricTaskApi
      * Operation createCustomerServiceMetricTask
      *
      * @param  string $accept_language Use this header to specify the natural language in which the authenticated user desires the response. (required)
-     * @param  \Swagger\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -106,9 +106,9 @@ class CustomerServiceMetricTaskApi
      * Operation createCustomerServiceMetricTaskWithHttpInfo
      *
      * @param  string $accept_language Use this header to specify the natural language in which the authenticated user desires the response. (required)
-     * @param  \Swagger\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -160,7 +160,7 @@ class CustomerServiceMetricTaskApi
      * 
      *
      * @param  string $accept_language Use this header to specify the natural language in which the authenticated user desires the response. (required)
-     * @param  \Swagger\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -181,7 +181,7 @@ class CustomerServiceMetricTaskApi
      * 
      *
      * @param  string $accept_language Use this header to specify the natural language in which the authenticated user desires the response. (required)
-     * @param  \Swagger\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -218,7 +218,7 @@ class CustomerServiceMetricTaskApi
      * Create request for operation 'createCustomerServiceMetricTask'
      *
      * @param  string $accept_language Use this header to specify the natural language in which the authenticated user desires the response. (required)
-     * @param  \Swagger\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest $body Request payload containing version, feedType, and optional filterCriteria. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -334,9 +334,9 @@ class CustomerServiceMetricTaskApi
      *
      * @param  string $task_id Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ServiceMetricsTask
+     * @return \SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask
      */
     public function getCustomerServiceMetricTask($task_id)
     {
@@ -349,13 +349,13 @@ class CustomerServiceMetricTaskApi
      *
      * @param  string $task_id Use this path parameter to specify the task ID value for the customer service metric task to retrieve. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ServiceMetricsTask, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerServiceMetricTaskWithHttpInfo($task_id)
     {
-        $returnType = '\Swagger\Client\Model\ServiceMetricsTask';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask';
         $request = $this->getCustomerServiceMetricTaskRequest($task_id);
 
         try {
@@ -407,7 +407,7 @@ class CustomerServiceMetricTaskApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ServiceMetricsTask',
+                        '\SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -449,7 +449,7 @@ class CustomerServiceMetricTaskApi
      */
     public function getCustomerServiceMetricTaskAsyncWithHttpInfo($task_id)
     {
-        $returnType = '\Swagger\Client\Model\ServiceMetricsTask';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask';
         $request = $this->getCustomerServiceMetricTaskRequest($task_id);
 
         return $this->client
@@ -607,9 +607,9 @@ class CustomerServiceMetricTaskApi
      * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of customer service metric tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. Default: 0 (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CustomerServiceMetricTaskCollection
+     * @return \SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricTaskCollection
      */
     public function getCustomerServiceMetricTasks($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null)
     {
@@ -626,13 +626,13 @@ class CustomerServiceMetricTaskApi
      * @param  int $look_back_days The number of previous days in which to search for tasks. Do not use with the date_range parameter. If both date_range and look_back_days are omitted, this parameter&#39;s default value is used. Default value: 7 Range: 1-90 (inclusive) (optional)
      * @param  int $offset The number of customer service metric tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. Default: 0 (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CustomerServiceMetricTaskCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricTaskCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerServiceMetricTasksWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomerServiceMetricTaskCollection';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricTaskCollection';
         $request = $this->getCustomerServiceMetricTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset);
 
         try {
@@ -684,7 +684,7 @@ class CustomerServiceMetricTaskApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CustomerServiceMetricTaskCollection',
+                        '\SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricTaskCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -734,7 +734,7 @@ class CustomerServiceMetricTaskApi
      */
     public function getCustomerServiceMetricTasksAsyncWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null)
     {
-        $returnType = '\Swagger\Client\Model\CustomerServiceMetricTaskCollection';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricTaskCollection';
         $request = $this->getCustomerServiceMetricTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset);
 
         return $this->client

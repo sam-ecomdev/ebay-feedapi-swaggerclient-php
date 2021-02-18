@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace SwaggerEbayFeedApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use SwaggerEbayFeedApi\Client\ApiException;
+use SwaggerEbayFeedApi\Client\Configuration;
+use SwaggerEbayFeedApi\Client\HeaderSelector;
+use SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * ScheduleApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -90,9 +90,9 @@ class ScheduleApi
     /**
      * Operation createSchedule
      *
-     * @param  \Swagger\Client\Model\CreateUserScheduleRequest $body In the request payload: feedType and scheduleTemplateId are required; scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateUserScheduleRequest $body In the request payload: feedType and scheduleTemplateId are required; scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -105,9 +105,9 @@ class ScheduleApi
     /**
      * Operation createScheduleWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\CreateUserScheduleRequest $body In the request payload: feedType and scheduleTemplateId are required; scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateUserScheduleRequest $body In the request payload: feedType and scheduleTemplateId are required; scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -180,7 +180,7 @@ class ScheduleApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateUserScheduleRequest $body In the request payload: feedType and scheduleTemplateId are required; scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateUserScheduleRequest $body In the request payload: feedType and scheduleTemplateId are required; scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -200,7 +200,7 @@ class ScheduleApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateUserScheduleRequest $body In the request payload: feedType and scheduleTemplateId are required; scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateUserScheduleRequest $body In the request payload: feedType and scheduleTemplateId are required; scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -250,7 +250,7 @@ class ScheduleApi
     /**
      * Create request for operation 'createSchedule'
      *
-     * @param  \Swagger\Client\Model\CreateUserScheduleRequest $body In the request payload: feedType and scheduleTemplateId are required; scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateUserScheduleRequest $body In the request payload: feedType and scheduleTemplateId are required; scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -356,7 +356,7 @@ class ScheduleApi
      *
      * @param  string $schedule_id The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -370,7 +370,7 @@ class ScheduleApi
      *
      * @param  string $schedule_id The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -588,9 +588,9 @@ class ScheduleApi
      *
      * @param  string $schedule_id The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StreamingOutput
+     * @return \SwaggerEbayFeedApi\Client\Model\StreamingOutput
      */
     public function getLatestResultFile($schedule_id)
     {
@@ -603,13 +603,13 @@ class ScheduleApi
      *
      * @param  string $schedule_id The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StreamingOutput, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\StreamingOutput, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLatestResultFileWithHttpInfo($schedule_id)
     {
-        $returnType = '\Swagger\Client\Model\StreamingOutput';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
         $request = $this->getLatestResultFileRequest($schedule_id);
 
         try {
@@ -661,7 +661,7 @@ class ScheduleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StreamingOutput',
+                        '\SwaggerEbayFeedApi\Client\Model\StreamingOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -703,7 +703,7 @@ class ScheduleApi
      */
     public function getLatestResultFileAsyncWithHttpInfo($schedule_id)
     {
-        $returnType = '\Swagger\Client\Model\StreamingOutput';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
         $request = $this->getLatestResultFileRequest($schedule_id);
 
         return $this->client
@@ -857,9 +857,9 @@ class ScheduleApi
      *
      * @param  string $schedule_id The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\UserScheduleResponse
+     * @return \SwaggerEbayFeedApi\Client\Model\UserScheduleResponse
      */
     public function getSchedule($schedule_id)
     {
@@ -872,13 +872,13 @@ class ScheduleApi
      *
      * @param  string $schedule_id The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\UserScheduleResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\UserScheduleResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getScheduleWithHttpInfo($schedule_id)
     {
-        $returnType = '\Swagger\Client\Model\UserScheduleResponse';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\UserScheduleResponse';
         $request = $this->getScheduleRequest($schedule_id);
 
         try {
@@ -930,7 +930,7 @@ class ScheduleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\UserScheduleResponse',
+                        '\SwaggerEbayFeedApi\Client\Model\UserScheduleResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -972,7 +972,7 @@ class ScheduleApi
      */
     public function getScheduleAsyncWithHttpInfo($schedule_id)
     {
-        $returnType = '\Swagger\Client\Model\UserScheduleResponse';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\UserScheduleResponse';
         $request = $this->getScheduleRequest($schedule_id);
 
         return $this->client
@@ -1126,9 +1126,9 @@ class ScheduleApi
      *
      * @param  string $schedule_template_id The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ScheduleTemplateResponse
+     * @return \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse
      */
     public function getScheduleTemplate($schedule_template_id)
     {
@@ -1141,13 +1141,13 @@ class ScheduleApi
      *
      * @param  string $schedule_template_id The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ScheduleTemplateResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getScheduleTemplateWithHttpInfo($schedule_template_id)
     {
-        $returnType = '\Swagger\Client\Model\ScheduleTemplateResponse';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse';
         $request = $this->getScheduleTemplateRequest($schedule_template_id);
 
         try {
@@ -1199,7 +1199,7 @@ class ScheduleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ScheduleTemplateResponse',
+                        '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1241,7 +1241,7 @@ class ScheduleApi
      */
     public function getScheduleTemplateAsyncWithHttpInfo($schedule_template_id)
     {
-        $returnType = '\Swagger\Client\Model\ScheduleTemplateResponse';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse';
         $request = $this->getScheduleTemplateRequest($schedule_template_id);
 
         return $this->client
@@ -1397,9 +1397,9 @@ class ScheduleApi
      * @param  int $limit The maximum number of schedule templates that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedule templates 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedule templates to skip in the result set before returning the first template in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ScheduleTemplateCollection
+     * @return \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateCollection
      */
     public function getScheduleTemplates($feed_type, $limit = null, $offset = null)
     {
@@ -1414,13 +1414,13 @@ class ScheduleApi
      * @param  int $limit The maximum number of schedule templates that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedule templates 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedule templates to skip in the result set before returning the first template in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ScheduleTemplateCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function getScheduleTemplatesWithHttpInfo($feed_type, $limit = null, $offset = null)
     {
-        $returnType = '\Swagger\Client\Model\ScheduleTemplateCollection';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateCollection';
         $request = $this->getScheduleTemplatesRequest($feed_type, $limit, $offset);
 
         try {
@@ -1472,7 +1472,7 @@ class ScheduleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ScheduleTemplateCollection',
+                        '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1518,7 +1518,7 @@ class ScheduleApi
      */
     public function getScheduleTemplatesAsyncWithHttpInfo($feed_type, $limit = null, $offset = null)
     {
-        $returnType = '\Swagger\Client\Model\ScheduleTemplateCollection';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateCollection';
         $request = $this->getScheduleTemplatesRequest($feed_type, $limit, $offset);
 
         return $this->client
@@ -1680,9 +1680,9 @@ class ScheduleApi
      * @param  int $limit The maximum number of schedules that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedules 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedules to skip in the result set before returning the first schedule in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\UserScheduleCollection
+     * @return \SwaggerEbayFeedApi\Client\Model\UserScheduleCollection
      */
     public function getSchedules($feed_type, $limit = null, $offset = null)
     {
@@ -1697,13 +1697,13 @@ class ScheduleApi
      * @param  int $limit The maximum number of schedules that can be returned on each page of the paginated response. Use this parameter in conjunction with the offset parameter to control the pagination of the output. Note: This feature employs a zero-based list, where the first item in the list has an offset of 0. For example, if offset is set to 10 and limit is set to 10, the call retrieves schedules 11 thru 20 from the result set. If this parameter is omitted, the default value is used. Default: 10 Maximum: 500 (optional)
      * @param  int $offset The number of schedules to skip in the result set before returning the first schedule in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\UserScheduleCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\UserScheduleCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSchedulesWithHttpInfo($feed_type, $limit = null, $offset = null)
     {
-        $returnType = '\Swagger\Client\Model\UserScheduleCollection';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\UserScheduleCollection';
         $request = $this->getSchedulesRequest($feed_type, $limit, $offset);
 
         try {
@@ -1755,7 +1755,7 @@ class ScheduleApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\UserScheduleCollection',
+                        '\SwaggerEbayFeedApi\Client\Model\UserScheduleCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1801,7 +1801,7 @@ class ScheduleApi
      */
     public function getSchedulesAsyncWithHttpInfo($feed_type, $limit = null, $offset = null)
     {
-        $returnType = '\Swagger\Client\Model\UserScheduleCollection';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\UserScheduleCollection';
         $request = $this->getSchedulesRequest($feed_type, $limit, $offset);
 
         return $this->client
@@ -1960,9 +1960,9 @@ class ScheduleApi
      * Operation updateSchedule
      *
      * @param  string $schedule_id The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
-     * @param  \Swagger\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1975,9 +1975,9 @@ class ScheduleApi
      * Operation updateScheduleWithHttpInfo
      *
      * @param  string $schedule_id The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
-     * @param  \Swagger\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2029,7 +2029,7 @@ class ScheduleApi
      * 
      *
      * @param  string $schedule_id The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
-     * @param  \Swagger\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2050,7 +2050,7 @@ class ScheduleApi
      * 
      *
      * @param  string $schedule_id The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
-     * @param  \Swagger\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2087,7 +2087,7 @@ class ScheduleApi
      * Create request for operation 'updateSchedule'
      *
      * @param  string $schedule_id The ID of the schedule to update. This ID is generated when the schedule was created by the createSchedule method. (required)
-     * @param  \Swagger\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\UpdateUserScheduleRequest $body In the request payload: scheduleName is optional; preferredTriggerHour, preferredTriggerDayOfWeek, preferredTriggerDayOfMonth, scheduleStartDate, scheduleEndDate, and schemaVersion are conditional. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

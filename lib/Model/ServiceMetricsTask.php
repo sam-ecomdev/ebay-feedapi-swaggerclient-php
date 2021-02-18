@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace SwaggerEbayFeedApi\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * ServiceMetricsTask Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class ServiceMetricsTask implements ModelInterface, ArrayAccess
         'creation_date' => 'string',
         'detail_href' => 'string',
         'feed_type' => 'string',
-        'filter_criteria' => '\Swagger\Client\Model\CustomerServiceMetricsFilterCriteria',
+        'filter_criteria' => '\SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricsFilterCriteria',
         'schema_version' => 'string',
         'status' => 'string',
         'task_id' => 'string'
@@ -345,7 +345,7 @@ class ServiceMetricsTask implements ModelInterface, ArrayAccess
     /**
      * Gets filter_criteria
      *
-     * @return \Swagger\Client\Model\CustomerServiceMetricsFilterCriteria
+     * @return \SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricsFilterCriteria
      */
     public function getFilterCriteria()
     {
@@ -355,7 +355,7 @@ class ServiceMetricsTask implements ModelInterface, ArrayAccess
     /**
      * Sets filter_criteria
      *
-     * @param \Swagger\Client\Model\CustomerServiceMetricsFilterCriteria $filter_criteria filter_criteria
+     * @param \SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricsFilterCriteria $filter_criteria filter_criteria
      *
      * @return $this
      */

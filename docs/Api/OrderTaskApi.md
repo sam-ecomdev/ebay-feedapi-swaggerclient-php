@@ -1,4 +1,4 @@
-# Swagger\Client\OrderTaskApi
+# SwaggerEbayFeedApi\Client\OrderTaskApi
 
 All URIs are relative to *https://api.ebay.com/sell/feed/v1*
 
@@ -22,15 +22,15 @@ This method creates an order download task with filter criteria for the order re
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\OrderTaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\OrderTaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\CreateOrderTaskRequest(); // \Swagger\Client\Model\CreateOrderTaskRequest | description not needed
+$body = new \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest(); // \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest | description not needed
 $x_ebay_c_marketplace_id = "x_ebay_c_marketplace_id_example"; // string | The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID = EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum.
 
 try {
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CreateOrderTaskRequest**](../Model/CreateOrderTaskRequest.md)| description not needed |
+ **body** | [**\SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest**](../Model/CreateOrderTaskRequest.md)| description not needed |
  **x_ebay_c_marketplace_id** | **string**| The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. | [optional]
 
 ### Return type
@@ -64,7 +64,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrderTask**
-> \Swagger\Client\Model\OrderTask getOrderTask($task_id)
+> \SwaggerEbayFeedApi\Client\Model\OrderTask getOrderTask($task_id)
 
 
 
@@ -76,9 +76,9 @@ This method retrieves the task details and status of the specified task. The inp
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\OrderTaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\OrderTaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\OrderTask**](../Model/OrderTask.md)
+[**\SwaggerEbayFeedApi\Client\Model\OrderTask**](../Model/OrderTask.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getOrderTasks**
-> \Swagger\Client\Model\OrderTaskCollection getOrderTasks($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id)
+> \SwaggerEbayFeedApi\Client\Model\OrderTaskCollection getOrderTasks($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id)
 
 
 
@@ -129,9 +129,9 @@ This method returns the details and status for an array of order tasks based on 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\OrderTaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\OrderTaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\OrderTaskCollection**](../Model/OrderTaskCollection.md)
+[**\SwaggerEbayFeedApi\Client\Model\OrderTaskCollection**](../Model/OrderTaskCollection.md)
 
 ### Authorization
 

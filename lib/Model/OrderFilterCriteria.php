@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace SwaggerEbayFeedApi\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * OrderFilterCriteria Class Doc Comment
  *
  * @category Class
  * @description The type that defines the fields for the order filters.
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,8 +58,8 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'creation_date_range' => '\Swagger\Client\Model\DateRange',
-        'modified_date_range' => '\Swagger\Client\Model\DateRange',
+        'creation_date_range' => '\SwaggerEbayFeedApi\Client\Model\DateRange',
+        'modified_date_range' => '\SwaggerEbayFeedApi\Client\Model\DateRange',
         'order_status' => 'string'
     ];
 
@@ -220,7 +220,7 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
     /**
      * Gets creation_date_range
      *
-     * @return \Swagger\Client\Model\DateRange
+     * @return \SwaggerEbayFeedApi\Client\Model\DateRange
      */
     public function getCreationDateRange()
     {
@@ -230,7 +230,7 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
     /**
      * Sets creation_date_range
      *
-     * @param \Swagger\Client\Model\DateRange $creation_date_range creation_date_range
+     * @param \SwaggerEbayFeedApi\Client\Model\DateRange $creation_date_range creation_date_range
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
     /**
      * Gets modified_date_range
      *
-     * @return \Swagger\Client\Model\DateRange
+     * @return \SwaggerEbayFeedApi\Client\Model\DateRange
      */
     public function getModifiedDateRange()
     {
@@ -254,7 +254,7 @@ class OrderFilterCriteria implements ModelInterface, ArrayAccess
     /**
      * Sets modified_date_range
      *
-     * @param \Swagger\Client\Model\DateRange $modified_date_range modified_date_range
+     * @param \SwaggerEbayFeedApi\Client\Model\DateRange $modified_date_range modified_date_range
      *
      * @return $this
      */

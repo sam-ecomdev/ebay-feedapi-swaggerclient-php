@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace SwaggerEbayFeedApi\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * OrderTask Class Doc Comment
  *
  * @category Class
  * @description The type that defines the fields for the &lt;b&gt; getOrderTask&lt;/b&gt; response.
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,11 +62,11 @@ class OrderTask implements ModelInterface, ArrayAccess
         'creation_date' => 'string',
         'detail_href' => 'string',
         'feed_type' => 'string',
-        'filter_criteria' => '\Swagger\Client\Model\OrderFilterCriteria',
+        'filter_criteria' => '\SwaggerEbayFeedApi\Client\Model\OrderFilterCriteria',
         'schema_version' => 'string',
         'status' => 'string',
         'task_id' => 'string',
-        'upload_summary' => '\Swagger\Client\Model\UploadSummary'
+        'upload_summary' => '\SwaggerEbayFeedApi\Client\Model\UploadSummary'
     ];
 
     /**
@@ -352,7 +352,7 @@ class OrderTask implements ModelInterface, ArrayAccess
     /**
      * Gets filter_criteria
      *
-     * @return \Swagger\Client\Model\OrderFilterCriteria
+     * @return \SwaggerEbayFeedApi\Client\Model\OrderFilterCriteria
      */
     public function getFilterCriteria()
     {
@@ -362,7 +362,7 @@ class OrderTask implements ModelInterface, ArrayAccess
     /**
      * Sets filter_criteria
      *
-     * @param \Swagger\Client\Model\OrderFilterCriteria $filter_criteria filter_criteria
+     * @param \SwaggerEbayFeedApi\Client\Model\OrderFilterCriteria $filter_criteria filter_criteria
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class OrderTask implements ModelInterface, ArrayAccess
     /**
      * Gets upload_summary
      *
-     * @return \Swagger\Client\Model\UploadSummary
+     * @return \SwaggerEbayFeedApi\Client\Model\UploadSummary
      */
     public function getUploadSummary()
     {
@@ -458,7 +458,7 @@ class OrderTask implements ModelInterface, ArrayAccess
     /**
      * Sets upload_summary
      *
-     * @param \Swagger\Client\Model\UploadSummary $upload_summary upload_summary
+     * @param \SwaggerEbayFeedApi\Client\Model\UploadSummary $upload_summary upload_summary
      *
      * @return $this
      */

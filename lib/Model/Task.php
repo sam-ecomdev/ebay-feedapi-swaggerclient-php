@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace SwaggerEbayFeedApi\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * Task Class Doc Comment
  *
  * @category Class
  * @description The type that defines the fields for the task details.
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -65,7 +65,7 @@ class Task implements ModelInterface, ArrayAccess
         'schema_version' => 'string',
         'status' => 'string',
         'task_id' => 'string',
-        'upload_summary' => '\Swagger\Client\Model\UploadSummary'
+        'upload_summary' => '\SwaggerEbayFeedApi\Client\Model\UploadSummary'
     ];
 
     /**
@@ -418,7 +418,7 @@ class Task implements ModelInterface, ArrayAccess
     /**
      * Gets upload_summary
      *
-     * @return \Swagger\Client\Model\UploadSummary
+     * @return \SwaggerEbayFeedApi\Client\Model\UploadSummary
      */
     public function getUploadSummary()
     {
@@ -428,7 +428,7 @@ class Task implements ModelInterface, ArrayAccess
     /**
      * Sets upload_summary
      *
-     * @param \Swagger\Client\Model\UploadSummary $upload_summary upload_summary
+     * @param \SwaggerEbayFeedApi\Client\Model\UploadSummary $upload_summary upload_summary
      *
      * @return $this
      */

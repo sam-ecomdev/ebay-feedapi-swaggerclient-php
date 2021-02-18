@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace SwaggerEbayFeedApi\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * CustomerServiceMetricTaskCollection Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class CustomerServiceMetricTaskCollection implements ModelInterface, ArrayAccess
         'next' => 'string',
         'offset' => 'int',
         'prev' => 'string',
-        'tasks' => '\Swagger\Client\Model\ServiceMetricsTask[]',
+        'tasks' => '\SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask[]',
         'total' => 'int'
     ];
 
@@ -363,7 +363,7 @@ class CustomerServiceMetricTaskCollection implements ModelInterface, ArrayAccess
     /**
      * Gets tasks
      *
-     * @return \Swagger\Client\Model\ServiceMetricsTask[]
+     * @return \SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask[]
      */
     public function getTasks()
     {
@@ -373,7 +373,7 @@ class CustomerServiceMetricTaskCollection implements ModelInterface, ArrayAccess
     /**
      * Sets tasks
      *
-     * @param \Swagger\Client\Model\ServiceMetricsTask[] $tasks An array of the customer service tasks on this page. The tasks are sorted by creation date. An empty array is returned if the filter criteria excludes all tasks.
+     * @param \SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask[] $tasks An array of the customer service tasks on this page. The tasks are sorted by creation date. An empty array is returned if the filter criteria excludes all tasks.
      *
      * @return $this
      */

@@ -1,4 +1,4 @@
-# Swagger\Client\TaskApi
+# SwaggerEbayFeedApi\Client\TaskApi
 
 All URIs are relative to *https://api.ebay.com/sell/feed/v1*
 
@@ -25,15 +25,15 @@ This method creates an upload task or a download task without filter criteria. W
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\TaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\CreateTaskRequest(); // \Swagger\Client\Model\CreateTaskRequest | description not needed
+$body = new \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest(); // \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest | description not needed
 $x_ebay_c_marketplace_id = "x_ebay_c_marketplace_id_example"; // string | The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID = EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum.
 
 try {
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\CreateTaskRequest**](../Model/CreateTaskRequest.md)| description not needed |
+ **body** | [**\SwaggerEbayFeedApi\Client\Model\CreateTaskRequest**](../Model/CreateTaskRequest.md)| description not needed |
  **x_ebay_c_marketplace_id** | **string**| The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. | [optional]
 
 ### Return type
@@ -67,7 +67,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getInputFile**
-> \Swagger\Client\Model\StreamingOutput getInputFile($task_id)
+> \SwaggerEbayFeedApi\Client\Model\StreamingOutput getInputFile($task_id)
 
 
 
@@ -79,9 +79,9 @@ This method downloads the file previously uploaded using uploadFile. Specify the
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\TaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StreamingOutput**](../Model/StreamingOutput.md)
+[**\SwaggerEbayFeedApi\Client\Model\StreamingOutput**](../Model/StreamingOutput.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getResultFile**
-> \Swagger\Client\Model\StreamingOutput getResultFile($task_id)
+> \SwaggerEbayFeedApi\Client\Model\StreamingOutput getResultFile($task_id)
 
 
 
@@ -132,9 +132,9 @@ This method retrieves the generated file that is associated with the specified t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\TaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StreamingOutput**](../Model/StreamingOutput.md)
+[**\SwaggerEbayFeedApi\Client\Model\StreamingOutput**](../Model/StreamingOutput.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTask**
-> \Swagger\Client\Model\Task getTask($task_id)
+> \SwaggerEbayFeedApi\Client\Model\Task getTask($task_id)
 
 
 
@@ -185,9 +185,9 @@ This method retrieves the details and status of the specified task. The input is
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\TaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Task**](../Model/Task.md)
+[**\SwaggerEbayFeedApi\Client\Model\Task**](../Model/Task.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTasks**
-> \Swagger\Client\Model\TaskCollection getTasks($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id)
+> \SwaggerEbayFeedApi\Client\Model\TaskCollection getTasks($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id)
 
 
 
@@ -238,9 +238,9 @@ This method returns the details and status for an array of tasks based on a spec
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\TaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TaskCollection**](../Model/TaskCollection.md)
+[**\SwaggerEbayFeedApi\Client\Model\TaskCollection**](../Model/TaskCollection.md)
 
 ### Authorization
 
@@ -301,16 +301,16 @@ This method associates the specified file with the specified task ID and uploads
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\TaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $task_id = "task_id_example"; // string | The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created.
-$body = new \Swagger\Client\Model\FormDataContentDisposition(); // \Swagger\Client\Model\FormDataContentDisposition | 
+$body = new \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition(); // \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition | 
 
 try {
     $result = $apiInstance->uploadFile($task_id, $body);
@@ -326,7 +326,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **string**| The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. |
- **body** | [**\Swagger\Client\Model\FormDataContentDisposition**](../Model/FormDataContentDisposition.md)|  | [optional]
+ **body** | [**\SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition**](../Model/FormDataContentDisposition.md)|  | [optional]
 
 ### Return type
 

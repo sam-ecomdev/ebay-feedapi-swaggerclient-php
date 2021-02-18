@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **name** | **string** | The template name provided by the template. | [optional] 
 **schedule_template_id** | **string** | The ID of the template. Use this ID to create a schedule based on the properties of this schedule template. | [optional] 
 **status** | **string** | The present status of the template. You cannot create or modify a schedule using a template with an INACTIVE status. For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/api-docs/sell/feed/types/api:StatusEnum&#39;&gt;eBay API documentation&lt;/a&gt; | [optional] 
-**supported_configurations** | [**\Swagger\Client\Model\SupportedConfiguration[]**](SupportedConfiguration.md) | An array of the configuration supported by this template. | [optional] 
+**supported_configurations** | [**\SwaggerEbayFeedApi\Client\Model\SupportedConfiguration[]**](SupportedConfiguration.md) | An array of the configuration supported by this template. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace SwaggerEbayFeedApi\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * OrderTaskCollection Class Doc Comment
  *
  * @category Class
  * @description The type that defines the fields for a paginated result set of orders. The response consists of 0 or more sequenced &lt;em&gt; pages&lt;/em&gt; where each page has 0 or more items.
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class OrderTaskCollection implements ModelInterface, ArrayAccess
         'next' => 'string',
         'offset' => 'int',
         'prev' => 'string',
-        'tasks' => '\Swagger\Client\Model\OrderTask[]',
+        'tasks' => '\SwaggerEbayFeedApi\Client\Model\OrderTask[]',
         'total' => 'int'
     ];
 
@@ -364,7 +364,7 @@ class OrderTaskCollection implements ModelInterface, ArrayAccess
     /**
      * Gets tasks
      *
-     * @return \Swagger\Client\Model\OrderTask[]
+     * @return \SwaggerEbayFeedApi\Client\Model\OrderTask[]
      */
     public function getTasks()
     {
@@ -374,7 +374,7 @@ class OrderTaskCollection implements ModelInterface, ArrayAccess
     /**
      * Sets tasks
      *
-     * @param \Swagger\Client\Model\OrderTask[] $tasks An array of the order tasks on this page. The tasks are sorted by creation date. An empty array is returned if the filter criteria excludes all tasks.
+     * @param \SwaggerEbayFeedApi\Client\Model\OrderTask[] $tasks An array of the order tasks on this page. The tasks are sorted by creation date. An empty array is returned if the filter criteria excludes all tasks.
      *
      * @return $this
      */

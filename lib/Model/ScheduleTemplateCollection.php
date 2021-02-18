@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace SwaggerEbayFeedApi\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * ScheduleTemplateCollection Class Doc Comment
  *
  * @category Class
  * @description The type that defines the fields for a paginated result set of schedule templates. The response consists of 0 or more sequenced &lt;em&gt; pages&lt;/em&gt; where each page has 0 or more items.
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class ScheduleTemplateCollection implements ModelInterface, ArrayAccess
         'next' => 'string',
         'offset' => 'int',
         'prev' => 'string',
-        'schedule_templates' => '\Swagger\Client\Model\ScheduleTemplateResponse[]',
+        'schedule_templates' => '\SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse[]',
         'total' => 'int'
     ];
 
@@ -364,7 +364,7 @@ class ScheduleTemplateCollection implements ModelInterface, ArrayAccess
     /**
      * Gets schedule_templates
      *
-     * @return \Swagger\Client\Model\ScheduleTemplateResponse[]
+     * @return \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse[]
      */
     public function getScheduleTemplates()
     {
@@ -374,7 +374,7 @@ class ScheduleTemplateCollection implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_templates
      *
-     * @param \Swagger\Client\Model\ScheduleTemplateResponse[] $schedule_templates An array of the schedule templates on this page. An empty array is returned if the filter criteria excludes all tasks.
+     * @param \SwaggerEbayFeedApi\Client\Model\ScheduleTemplateResponse[] $schedule_templates An array of the schedule templates on this page. An empty array is returned if the filter criteria excludes all tasks.
      *
      * @return $this
      */

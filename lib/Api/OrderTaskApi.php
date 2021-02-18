@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace SwaggerEbayFeedApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use SwaggerEbayFeedApi\Client\ApiException;
+use SwaggerEbayFeedApi\Client\Configuration;
+use SwaggerEbayFeedApi\Client\HeaderSelector;
+use SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * OrderTaskApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -90,10 +90,10 @@ class OrderTaskApi
     /**
      * Operation createOrderTask
      *
-     * @param  \Swagger\Client\Model\CreateOrderTaskRequest $body description not needed (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest $body description not needed (required)
      * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -105,10 +105,10 @@ class OrderTaskApi
     /**
      * Operation createOrderTaskWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\CreateOrderTaskRequest $body description not needed (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest $body description not needed (required)
      * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -159,7 +159,7 @@ class OrderTaskApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateOrderTaskRequest $body description not needed (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest $body description not needed (required)
      * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
@@ -180,7 +180,7 @@ class OrderTaskApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateOrderTaskRequest $body description not needed (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest $body description not needed (required)
      * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
@@ -217,7 +217,7 @@ class OrderTaskApi
     /**
      * Create request for operation 'createOrderTask'
      *
-     * @param  \Swagger\Client\Model\CreateOrderTaskRequest $body description not needed (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateOrderTaskRequest $body description not needed (required)
      * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
@@ -328,9 +328,9 @@ class OrderTaskApi
      *
      * @param  string $task_id The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\OrderTask
+     * @return \SwaggerEbayFeedApi\Client\Model\OrderTask
      */
     public function getOrderTask($task_id)
     {
@@ -343,13 +343,13 @@ class OrderTaskApi
      *
      * @param  string $task_id The ID of the task. This ID is generated when the task was created by the createOrderTask method. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\OrderTask, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\OrderTask, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderTaskWithHttpInfo($task_id)
     {
-        $returnType = '\Swagger\Client\Model\OrderTask';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\OrderTask';
         $request = $this->getOrderTaskRequest($task_id);
 
         try {
@@ -401,7 +401,7 @@ class OrderTaskApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\OrderTask',
+                        '\SwaggerEbayFeedApi\Client\Model\OrderTask',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -443,7 +443,7 @@ class OrderTaskApi
      */
     public function getOrderTaskAsyncWithHttpInfo($task_id)
     {
-        $returnType = '\Swagger\Client\Model\OrderTask';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\OrderTask';
         $request = $this->getOrderTaskRequest($task_id);
 
         return $this->client
@@ -602,9 +602,9 @@ class OrderTaskApi
      * @param  int $offset The number of order tasks to skip in the result set before returning the first order in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      * @param  string $schedule_id The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\OrderTaskCollection
+     * @return \SwaggerEbayFeedApi\Client\Model\OrderTaskCollection
      */
     public function getOrderTasks($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
     {
@@ -622,13 +622,13 @@ class OrderTaskApi
      * @param  int $offset The number of order tasks to skip in the result set before returning the first order in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      * @param  string $schedule_id The schedule ID associated with the order task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_id parameter. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\OrderTaskCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\OrderTaskCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderTasksWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
     {
-        $returnType = '\Swagger\Client\Model\OrderTaskCollection';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\OrderTaskCollection';
         $request = $this->getOrderTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id);
 
         try {
@@ -680,7 +680,7 @@ class OrderTaskApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\OrderTaskCollection',
+                        '\SwaggerEbayFeedApi\Client\Model\OrderTaskCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -732,7 +732,7 @@ class OrderTaskApi
      */
     public function getOrderTasksAsyncWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
     {
-        $returnType = '\Swagger\Client\Model\OrderTaskCollection';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\OrderTaskCollection';
         $request = $this->getOrderTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id);
 
         return $this->client

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace SwaggerEbayFeedApi\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use SwaggerEbayFeedApi\Client\ApiException;
+use SwaggerEbayFeedApi\Client\Configuration;
+use SwaggerEbayFeedApi\Client\HeaderSelector;
+use SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * TaskApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -90,10 +90,10 @@ class TaskApi
     /**
      * Operation createTask
      *
-     * @param  \Swagger\Client\Model\CreateTaskRequest $body description not needed (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest $body description not needed (required)
      * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -105,10 +105,10 @@ class TaskApi
     /**
      * Operation createTaskWithHttpInfo
      *
-     * @param  \Swagger\Client\Model\CreateTaskRequest $body description not needed (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest $body description not needed (required)
      * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -159,7 +159,7 @@ class TaskApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateTaskRequest $body description not needed (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest $body description not needed (required)
      * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
@@ -180,7 +180,7 @@ class TaskApi
      *
      * 
      *
-     * @param  \Swagger\Client\Model\CreateTaskRequest $body description not needed (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest $body description not needed (required)
      * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
@@ -217,7 +217,7 @@ class TaskApi
     /**
      * Create request for operation 'createTask'
      *
-     * @param  \Swagger\Client\Model\CreateTaskRequest $body description not needed (required)
+     * @param  \SwaggerEbayFeedApi\Client\Model\CreateTaskRequest $body description not needed (required)
      * @param  string $x_ebay_c_marketplace_id The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID &#x3D; EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum. (optional)
      *
      * @throws \InvalidArgumentException
@@ -328,9 +328,9 @@ class TaskApi
      *
      * @param  string $task_id The task ID associated with the file to be downloaded. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StreamingOutput
+     * @return \SwaggerEbayFeedApi\Client\Model\StreamingOutput
      */
     public function getInputFile($task_id)
     {
@@ -343,13 +343,13 @@ class TaskApi
      *
      * @param  string $task_id The task ID associated with the file to be downloaded. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StreamingOutput, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\StreamingOutput, HTTP status code, HTTP response headers (array of strings)
      */
     public function getInputFileWithHttpInfo($task_id)
     {
-        $returnType = '\Swagger\Client\Model\StreamingOutput';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
         $request = $this->getInputFileRequest($task_id);
 
         try {
@@ -401,7 +401,7 @@ class TaskApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StreamingOutput',
+                        '\SwaggerEbayFeedApi\Client\Model\StreamingOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -443,7 +443,7 @@ class TaskApi
      */
     public function getInputFileAsyncWithHttpInfo($task_id)
     {
-        $returnType = '\Swagger\Client\Model\StreamingOutput';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
         $request = $this->getInputFileRequest($task_id);
 
         return $this->client
@@ -597,9 +597,9 @@ class TaskApi
      *
      * @param  string $task_id The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StreamingOutput
+     * @return \SwaggerEbayFeedApi\Client\Model\StreamingOutput
      */
     public function getResultFile($task_id)
     {
@@ -612,13 +612,13 @@ class TaskApi
      *
      * @param  string $task_id The ID of the task associated with the file you want to download. This ID was generated when the task was created. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StreamingOutput, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\StreamingOutput, HTTP status code, HTTP response headers (array of strings)
      */
     public function getResultFileWithHttpInfo($task_id)
     {
-        $returnType = '\Swagger\Client\Model\StreamingOutput';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
         $request = $this->getResultFileRequest($task_id);
 
         try {
@@ -670,7 +670,7 @@ class TaskApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StreamingOutput',
+                        '\SwaggerEbayFeedApi\Client\Model\StreamingOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -712,7 +712,7 @@ class TaskApi
      */
     public function getResultFileAsyncWithHttpInfo($task_id)
     {
-        $returnType = '\Swagger\Client\Model\StreamingOutput';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\StreamingOutput';
         $request = $this->getResultFileRequest($task_id);
 
         return $this->client
@@ -866,9 +866,9 @@ class TaskApi
      *
      * @param  string $task_id The ID of the task. This ID was generated when the task was created. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\Task
+     * @return \SwaggerEbayFeedApi\Client\Model\Task
      */
     public function getTask($task_id)
     {
@@ -881,13 +881,13 @@ class TaskApi
      *
      * @param  string $task_id The ID of the task. This ID was generated when the task was created. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\Task, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\Task, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaskWithHttpInfo($task_id)
     {
-        $returnType = '\Swagger\Client\Model\Task';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\Task';
         $request = $this->getTaskRequest($task_id);
 
         try {
@@ -939,7 +939,7 @@ class TaskApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\Task',
+                        '\SwaggerEbayFeedApi\Client\Model\Task',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -981,7 +981,7 @@ class TaskApi
      */
     public function getTaskAsyncWithHttpInfo($task_id)
     {
-        $returnType = '\Swagger\Client\Model\Task';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\Task';
         $request = $this->getTaskRequest($task_id);
 
         return $this->client
@@ -1140,9 +1140,9 @@ class TaskApi
      * @param  int $offset The number of tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      * @param  string $schedule_id The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TaskCollection
+     * @return \SwaggerEbayFeedApi\Client\Model\TaskCollection
      */
     public function getTasks($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
     {
@@ -1160,13 +1160,13 @@ class TaskApi
      * @param  int $offset The number of tasks to skip in the result set before returning the first task in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. Default: 0 (optional)
      * @param  string $schedule_id The schedule ID associated with the task. A schedule periodically generates a report for the feed type specified by the schedule template (see scheduleTemplateId in createSchedule). Do not use with the feed_type parameter. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TaskCollection, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \SwaggerEbayFeedApi\Client\Model\TaskCollection, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTasksWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
     {
-        $returnType = '\Swagger\Client\Model\TaskCollection';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\TaskCollection';
         $request = $this->getTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id);
 
         try {
@@ -1218,7 +1218,7 @@ class TaskApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TaskCollection',
+                        '\SwaggerEbayFeedApi\Client\Model\TaskCollection',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1270,7 +1270,7 @@ class TaskApi
      */
     public function getTasksAsyncWithHttpInfo($date_range = null, $feed_type = null, $limit = null, $look_back_days = null, $offset = null, $schedule_id = null)
     {
-        $returnType = '\Swagger\Client\Model\TaskCollection';
+        $returnType = '\SwaggerEbayFeedApi\Client\Model\TaskCollection';
         $request = $this->getTasksRequest($date_range, $feed_type, $limit, $look_back_days, $offset, $schedule_id);
 
         return $this->client
@@ -1438,9 +1438,9 @@ class TaskApi
      * Operation uploadFile
      *
      * @param  string $task_id The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
-     * @param  \Swagger\Client\Model\FormDataContentDisposition $body body (optional)
+     * @param  \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1454,9 +1454,9 @@ class TaskApi
      * Operation uploadFileWithHttpInfo
      *
      * @param  string $task_id The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
-     * @param  \Swagger\Client\Model\FormDataContentDisposition $body (optional)
+     * @param  \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \SwaggerEbayFeedApi\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1530,7 +1530,7 @@ class TaskApi
      * 
      *
      * @param  string $task_id The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
-     * @param  \Swagger\Client\Model\FormDataContentDisposition $body (optional)
+     * @param  \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1551,7 +1551,7 @@ class TaskApi
      * 
      *
      * @param  string $task_id The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
-     * @param  \Swagger\Client\Model\FormDataContentDisposition $body (optional)
+     * @param  \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1602,7 +1602,7 @@ class TaskApi
      * Create request for operation 'uploadFile'
      *
      * @param  string $task_id The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created. (required)
-     * @param  \Swagger\Client\Model\FormDataContentDisposition $body (optional)
+     * @param  \SwaggerEbayFeedApi\Client\Model\FormDataContentDisposition $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

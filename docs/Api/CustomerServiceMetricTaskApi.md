@@ -1,4 +1,4 @@
-# Swagger\Client\CustomerServiceMetricTaskApi
+# SwaggerEbayFeedApi\Client\CustomerServiceMetricTaskApi
 
 All URIs are relative to *https://api.ebay.com/sell/feed/v1*
 
@@ -22,16 +22,16 @@ Use this method to create a customer service metrics download task with filter c
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CustomerServiceMetricTaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\CustomerServiceMetricTaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $accept_language = "accept_language_example"; // string | Use this header to specify the natural language in which the authenticated user desires the response.
-$body = new \Swagger\Client\Model\CreateServiceMetricsTaskRequest(); // \Swagger\Client\Model\CreateServiceMetricsTaskRequest | Request payload containing version, feedType, and optional filterCriteria.
+$body = new \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest(); // \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest | Request payload containing version, feedType, and optional filterCriteria.
 
 try {
     $apiInstance->createCustomerServiceMetricTask($accept_language, $body);
@@ -46,7 +46,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accept_language** | **string**| Use this header to specify the natural language in which the authenticated user desires the response. |
- **body** | [**\Swagger\Client\Model\CreateServiceMetricsTaskRequest**](../Model/CreateServiceMetricsTaskRequest.md)| Request payload containing version, feedType, and optional filterCriteria. |
+ **body** | [**\SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest**](../Model/CreateServiceMetricsTaskRequest.md)| Request payload containing version, feedType, and optional filterCriteria. |
 
 ### Return type
 
@@ -64,7 +64,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerServiceMetricTask**
-> \Swagger\Client\Model\ServiceMetricsTask getCustomerServiceMetricTask($task_id)
+> \SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask getCustomerServiceMetricTask($task_id)
 
 
 
@@ -76,9 +76,9 @@ Use this method to retrieve customer service metric task details for the specifi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CustomerServiceMetricTaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\CustomerServiceMetricTaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ServiceMetricsTask**](../Model/ServiceMetricsTask.md)
+[**\SwaggerEbayFeedApi\Client\Model\ServiceMetricsTask**](../Model/ServiceMetricsTask.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCustomerServiceMetricTasks**
-> \Swagger\Client\Model\CustomerServiceMetricTaskCollection getCustomerServiceMetricTasks($date_range, $feed_type, $limit, $look_back_days, $offset)
+> \SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricTaskCollection getCustomerServiceMetricTasks($date_range, $feed_type, $limit, $look_back_days, $offset)
 
 
 
@@ -129,9 +129,9 @@ Use this method to return an array of customer service metric tasks. You can lim
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CustomerServiceMetricTaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\CustomerServiceMetricTaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomerServiceMetricTaskCollection**](../Model/CustomerServiceMetricTaskCollection.md)
+[**\SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricTaskCollection**](../Model/CustomerServiceMetricTaskCollection.md)
 
 ### Authorization
 

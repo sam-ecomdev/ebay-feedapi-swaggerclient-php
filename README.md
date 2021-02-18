@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "https://github.com/sam-ecomdev/ebay-feedapi-swaggerclient-php.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "sam-ecomdev/ebay-feedapi-swaggerclient-php": "*@dev"
   }
 }
 ```
@@ -57,16 +57,16 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Authorization Code
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = SwaggerEbayFeedApi\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CustomerServiceMetricTaskApi(
+$apiInstance = new SwaggerEbayFeedApi\Client\Api\CustomerServiceMetricTaskApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $accept_language = "accept_language_example"; // string | Use this header to specify the natural language in which the authenticated user desires the response.
-$body = new \Swagger\Client\Model\CreateServiceMetricsTaskRequest(); // \Swagger\Client\Model\CreateServiceMetricsTaskRequest | Request payload containing version, feedType, and optional filterCriteria.
+$body = new \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest(); // \SwaggerEbayFeedApi\Client\Model\CreateServiceMetricsTaskRequest | Request payload containing version, feedType, and optional filterCriteria.
 
 try {
     $apiInstance->createCustomerServiceMetricTask($accept_language, $body);

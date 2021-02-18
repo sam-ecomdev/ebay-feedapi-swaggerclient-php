@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace SwaggerEbayFeedApi\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * ScheduleTemplateResponse Class Doc Comment
  *
  * @category Class
  * @description The type that defines the fields for a paginated result set of available schedule templates. The response consists of 0 or more sequenced &lt;em&gt; pages&lt;/em&gt; where each page has 0 or more items.
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
         'name' => 'string',
         'schedule_template_id' => 'string',
         'status' => 'string',
-        'supported_configurations' => '\Swagger\Client\Model\SupportedConfiguration[]'
+        'supported_configurations' => '\SwaggerEbayFeedApi\Client\Model\SupportedConfiguration[]'
     ];
 
     /**
@@ -358,7 +358,7 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
     /**
      * Gets supported_configurations
      *
-     * @return \Swagger\Client\Model\SupportedConfiguration[]
+     * @return \SwaggerEbayFeedApi\Client\Model\SupportedConfiguration[]
      */
     public function getSupportedConfigurations()
     {
@@ -368,7 +368,7 @@ class ScheduleTemplateResponse implements ModelInterface, ArrayAccess
     /**
      * Sets supported_configurations
      *
-     * @param \Swagger\Client\Model\SupportedConfiguration[] $supported_configurations An array of the configuration supported by this template.
+     * @param \SwaggerEbayFeedApi\Client\Model\SupportedConfiguration[] $supported_configurations An array of the configuration supported by this template.
      *
      * @return $this
      */

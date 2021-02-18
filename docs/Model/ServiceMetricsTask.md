@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **creation_date** | **string** | The date the customer service metrics task was created. | [optional] 
 **detail_href** | **string** | The relative getCustomerServiceMetricTask call URI path to retrieve the corresponding task. | [optional] 
 **feed_type** | **string** | The feed type associated with the task. | [optional] 
-**filter_criteria** | [**\Swagger\Client\Model\CustomerServiceMetricsFilterCriteria**](CustomerServiceMetricsFilterCriteria.md) |  | [optional] 
+**filter_criteria** | [**\SwaggerEbayFeedApi\Client\Model\CustomerServiceMetricsFilterCriteria**](CustomerServiceMetricsFilterCriteria.md) |  | [optional] 
 **schema_version** | **string** | The schema version number of the file format. If omitted, the default value is used. Default value: 1.0 | [optional] 
 **status** | **string** | An enumeration value that indicates the state of the task. See FeedStatusEnum for values. For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/api-docs/sell/feed/types/api:FeedStatusEnum&#39;&gt;eBay API documentation&lt;/a&gt; | [optional] 
 **task_id** | **string** | The unique eBay-assigned ID of the task. | [optional] 

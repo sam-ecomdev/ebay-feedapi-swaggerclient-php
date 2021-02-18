@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace SwaggerEbayFeedApi\Client\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \SwaggerEbayFeedApi\Client\ObjectSerializer;
 
 /**
  * UserScheduleCollection Class Doc Comment
  *
  * @category Class
  * @description The type that defines the fields for a paginated result set of user schedules. The response consists of 0 or more sequenced &lt;em&gt; pages&lt;/em&gt; where each page has 0 or more items.
- * @package  Swagger\Client
+ * @package  SwaggerEbayFeedApi\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class UserScheduleCollection implements ModelInterface, ArrayAccess
         'next' => 'string',
         'offset' => 'int',
         'prev' => 'string',
-        'schedules' => '\Swagger\Client\Model\UserScheduleResponse[]',
+        'schedules' => '\SwaggerEbayFeedApi\Client\Model\UserScheduleResponse[]',
         'total' => 'int'
     ];
 
@@ -364,7 +364,7 @@ class UserScheduleCollection implements ModelInterface, ArrayAccess
     /**
      * Gets schedules
      *
-     * @return \Swagger\Client\Model\UserScheduleResponse[]
+     * @return \SwaggerEbayFeedApi\Client\Model\UserScheduleResponse[]
      */
     public function getSchedules()
     {
@@ -374,7 +374,7 @@ class UserScheduleCollection implements ModelInterface, ArrayAccess
     /**
      * Sets schedules
      *
-     * @param \Swagger\Client\Model\UserScheduleResponse[] $schedules An array of the schedules on this page. An empty array is returned if the filter criteria excludes all tasks.
+     * @param \SwaggerEbayFeedApi\Client\Model\UserScheduleResponse[] $schedules An array of the schedules on this page. An empty array is returned if the filter criteria excludes all tasks.
      *
      * @return $this
      */
