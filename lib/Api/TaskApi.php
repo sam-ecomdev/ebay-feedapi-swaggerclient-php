@@ -99,7 +99,7 @@ class TaskApi
      */
     public function createTask($body, $xEBAYCMARKETPLACEID = null)
     {
-        $this->createTaskWithHttpInfo($body, $xEBAYCMARKETPLACEID);
+        return $this->createTaskWithHttpInfo($body, $xEBAYCMARKETPLACEID);
     }
 
     /**
